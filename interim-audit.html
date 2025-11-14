@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iralis Jewelry - Google Ads Strategic Audit & Learning Phase Review</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #162642 0%, #1a2d4f 100%);
+            color: white;
+            line-height: 1.5;
+        }
+        
+        .slide {
+            min-height: 100vh;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            height: 60px;
+        }
+        
+        .slide-number {
+            background: #cc5b27;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .main-title {
+            font-size: 3.2em;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #cc5b27, #ff7c4c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 1.4em;
+            text-align: center;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            color: #cc5b27;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #cc5b27;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-number {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #cc5b27;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #cc5b27, #ff7c4c);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .highlight-box h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+        
+        .three-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+        
+        .data-table {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .data-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .data-table th {
+            background: #cc5b27;
+            padding: 12px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .data-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 13px;
+        }
+        
+        .data-table tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .performance-table {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .performance-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .performance-table th {
+            background: #2c3e50;
+            padding: 12px;
+            font-weight: bold;
+            font-size: 13px;
+            text-align: left;
+        }
+        
+        .performance-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 13px;
+        }
+        
+        .campaign-shopping { background: #4CAF50; color: white; font-weight: bold; text-align: center; }
+        .campaign-commercial-eng { background: #2196F3; color: white; font-weight: bold; text-align: center; }
+        .campaign-commercial-deu { background: #9C27B0; color: white; font-weight: bold; text-align: center; }
+        .campaign-info { background: #FF9800; color: white; font-weight: bold; text-align: center; }
+        
+        .bullet-points {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .bullet-points li {
+            margin: 12px 0;
+            padding-left: 25px;
+            position: relative;
+            font-size: 14px;
+        }
+        
+        .bullet-points li:before {
+            content: "▶";
+            color: #cc5b27;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .competitor-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(204, 91, 39, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        .issue-box {
+            background: rgba(244, 67, 54, 0.2);
+            border: 2px solid #F44336;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .opportunity-box {
+            background: rgba(76, 175, 80, 0.2);
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .warning-box {
+            background: rgba(255, 152, 0, 0.2);
+            border: 2px solid #FF9800;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .tier-box {
+            background: rgba(76, 175, 80, 0.2);
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .tier-title {
+            color: #4CAF50;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .roi-visual {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 30px 0;
+        }
+        
+        .roi-box {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            flex: 1;
+            margin: 0 8px;
+        }
+        
+        .arrow {
+            font-size: 1.8em;
+            color: #cc5b27;
+        }
+    </style>
+</head>
+<body>
+    <!-- Slide 1: Title -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">01</div>
+        </div>
+        <div class="main-title">Iralis Jewelry</div>
+        <div class="subtitle">Google Ads Learning Phase Review & Strategic Optimization Plan</div>
+        
+        <div class="highlight-box">
+            <h3>New Lead Generation Campaigns: Days 1-8 Performance Analysis</h3>
+            <p>Lab-Grown Diamond & Gemstone Jewelry | Swiss Market | Bilingual Strategy</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card" style="border-color: #4CAF50;">
+                <span class="stat-number" style="color: #4CAF50;">8 Days</span>
+                <div class="stat-label">Campaign Age<br>Deep in Learning Phase</div>
+            </div>
+            <div class="stat-card" style="border-color: #2196F3;">
+                <span class="stat-number" style="color: #2196F3;">CHF 1,171</span>
+                <div class="stat-label">Total Spend<br>30-Day Period</div>
+            </div>
+            <div class="stat-card" style="border-color: #E91E63;">
+                <span class="stat-number" style="color: #E91E63;">3</span>
+                <div class="stat-label">Total Conversions<br>Klaviyo Form Submits</div>
+            </div>
+            <div class="stat-card" style="border-color: #9C27B0;">
+                <span class="stat-number" style="color: #9C27B0;">86%</span>
+                <div class="stat-label">Mobile Traffic<br>Critical UX Factor</div>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <div style="font-size: 1.1em; margin-top: 20px;"><strong>Analysis Period: October 15 - November 13, 2025</strong></div>
+            <div style="opacity: 0.8; margin-top: 8px;">Campaign Launch: November 5, 2025 | Realistic Performance Assessment | No Exaggerated Projections</div>
+        </div>
+    </div>
+
+    <!-- Slide 2: Executive Summary -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">02</div>
+        </div>
+        <div class="section-title">Executive Summary: Setting Realistic Expectations</div>
+        
+        <div class="warning-box">
+            <div class="tier-title" style="color: #FF9800;">CRITICAL CONTEXT: TIMING MATTERS</div>
+            <ul class="bullet-points">
+                <li><strong>Campaign Launch Date:</strong> November 5, 2025 - only 8 days ago</li>
+                <li><strong>Learning Phase Standard:</strong> Google requires 21-30 days and 50+ conversions minimum</li>
+                <li><strong>Current Status:</strong> Far too early for conclusive performance data from search campaigns</li>
+                <li><strong>What This Means:</strong> Zero conversions from new campaigns is not alarming - it's expected at this stage</li>
+                <li><strong>Portfolio CPA of CHF 390:</strong> Misleading metric. Shopping campaign (CHF 95 CPA) is working. New campaigns have spent CHF 883 with zero conversions, inflating the average artificially</li>
+            </ul>
+        </div>
+
+        <div class="opportunity-box">
+            <div class="tier-title" style="color: #4CAF50;">WHAT IS WORKING RIGHT NOW</div>
+            <ul class="bullet-points">
+                <li><strong>Shopping Campaign Success:</strong> CHF 95 CPA for jewelry lead generation is acceptable. This campaign has matured and is delivering consistent results</li>
+                <li><strong>Market Leadership Position:</strong> 33.36% impression share - highest among all competitors in Swiss market</li>
+                <li><strong>Mobile Engagement Excellence:</strong> 86% of traffic on mobile with strong click-through rates on key terms</li>
+                <li><strong>Campaign Architecture:</strong> Well-structured intent-based segmentation (Commercial vs Informational) with proper bilingual approach</li>
+                <li><strong>Keyword Relevance:</strong> Strong CTRs on specific terms like "eleganter verlobungsring" (5.86%) and "oval cut engagement ring" (10.20%)</li>
+            </ul>
+        </div>
+
+        <div class="issue-box">
+            <div class="tier-title" style="color: #F44336;">IMMEDIATE PROBLEMS REQUIRING ACTION</div>
+            <ul class="bullet-points">
+                <li><strong>Search Term Quality Crisis:</strong> Shopping campaign attracting massive irrelevant traffic including French, Italian, Turkish, Russian, Arabic searches</li>
+                <li><strong>Competitor Brand Leakage:</strong> Serving ads for Cartier, Tiffany, Van Cleef, Chaumet, Swarovski searches - users not looking for Iralis</li>
+                <li><strong>Wrong Product Types:</strong> Showing for tennis bracelets, chains, earrings, wedding bands - products not in catalog</li>
+                <li><strong>Budget Ceiling Hit:</strong> Spending CHF 140-150/day with monthly cap at CHF 4,200. Some campaigns showing "limited by budget" already</li>
+                <li><strong>Tracking Verification Needed:</strong> Milena expressed concerns about GA4 and Klaviyo setup - need to confirm all conversions being captured properly</li>
+            </ul>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card" style="border-color: #4CAF50;">
+                <span class="stat-number" style="color: #4CAF50;">CHF 95</span>
+                <div class="stat-label">Shopping Campaign CPA<br>(Actual Working Performance)</div>
+            </div>
+            <div class="stat-card" style="border-color: #2196F3;">
+                <span class="stat-number" style="color: #2196F3;">33.36%</span>
+                <div class="stat-label">Market Impression Share<br>(Category Leader)</div>
+            </div>
+            <div class="stat-card" style="border-color: #FF9800;">
+                <span class="stat-number" style="color: #FF9800;">0</span>
+                <div class="stat-label">Search Campaign Conversions<br>(Expected at Day 8)</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">13-22</span>
+                <div class="stat-label">Days Remaining<br>Until Meaningful Data</div>
+            </div>
+        </stats-grid>
+    </div>
+
+    <!-- Slide 3: Campaign Performance Breakdown -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">03</div>
+        </div>
+        <div class="section-title">Individual Campaign Performance Analysis</div>
+        
+        <div class="performance-table">
+            <table>
+                <tr>
+                    <th>Campaign</th>
+                    <th>Language</th>
+                    <th>Daily Budget</th>
+                    <th>Actual Spend</th>
+                    <th>Clicks</th>
+                    <th>Conv.</th>
+                    <th>CPA</th>
+                    <th>Status</th>
+                </tr>
+                <tr class="campaign-shopping">
+                    <td><strong>Shopping - Best Sellers</strong></td>
+                    <td>Multi</td>
+                    <td>CHF 20</td>
+                    <td>CHF 284.56</td>
+                    <td>336</td>
+                    <td style="color: #fff;">3</td>
+                    <td style="color: #fff;">CHF 94.85</td>
+                    <td>CONVERTING</td>
+                </tr>
+                <tr class="campaign-commercial-eng">
+                    <td><strong>Commercial Intent</strong></td>
+                    <td>English</td>
+                    <td>CHF 30</td>
+                    <td>CHF 255.97</td>
+                    <td>63</td>
+                    <td style="color: #fff;">0</td>
+                    <td style="color: #fff;">--</td>
+                    <td>Learning (Day 8)</td>
+                </tr>
+                <tr class="campaign-commercial-deu">
+                    <td><strong>Commercial Intent</strong></td>
+                    <td>German</td>
+                    <td>CHF 30</td>
+                    <td>CHF 259.89</td>
+                    <td>65</td>
+                    <td style="color: #fff;">0</td>
+                    <td style="color: #fff;">--</td>
+                    <td>Learning (Day 8)</td>
+                </tr>
+                <tr class="campaign-info">
+                    <td><strong>Informational Intent</strong></td>
+                    <td>English</td>
+                    <td>CHF 20</td>
+                    <td>CHF 212.97</td>
+                    <td>32</td>
+                    <td style="color: #fff;">0</td>
+                    <td style="color: #fff;">--</td>
+                    <td>Learning (Day 8)</td>
+                </tr>
+                <tr class="campaign-info">
+                    <td><strong>Informational Intent</strong></td>
+                    <td>German</td>
+                    <td>CHF 20</td>
+                    <td>CHF 154.60</td>
+                    <td>42</td>
+                    <td style="color: #fff;">0</td>
+                    <td style="color: #fff;">--</td>
+                    <td>Learning (Day 8)</td>
+                </tr>
+                <tr>
+                    <td><strong>Display Remarketing</strong></td>
+                    <td>Multi</td>
+                    <td>CHF 20</td>
+                    <td>CHF 3.07</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>--</td>
+                    <td>Minimal Activity</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="three-column">
+            <div class="competitor-section" style="border-color: #4CAF50;">
+                <h4 style="color: #4CAF50; margin-bottom: 15px;">Shopping Campaign</h4>
+                <div style="font-size: 13px; margin-bottom: 15px;">
+                    <strong>Status:</strong> Mature & Converting<br>
+                    <strong>Launch:</strong> Pre-October 15<br>
+                    <strong>Product Feed:</strong> Best Sellers
+                </div>
+                <div style="color: #4CAF50; font-weight: bold; margin-bottom: 10px;">ONLY CONVERSION SOURCE</div>
+                <ul class="bullet-points" style="font-size: 12px;">
+                    <li>CHF 94.85 CPA is reasonable for jewelry leads</li>
+                    <li>336 clicks over 30 days (11 clicks/day average)</li>
+                    <li>Conversion rate: 0.89% (industry-typical for luxury)</li>
+                    <li>All 3 conversions came from mobile devices</li>
+                    <li>Spend increased from CHF 112 (prior period) to CHF 284</li>
+                </ul>
+                <div style="margin-top: 10px; padding: 10px; background: rgba(244, 67, 54, 0.2); border-radius: 5px; font-size: 12px;">
+                    <strong>Critical Issue:</strong> Massive irrelevant search term traffic needs immediate negative keyword intervention
+                </div>
+            </div>
+            
+            <div class="competitor-section" style="border-color: #2196F3;">
+                <h4 style="color: #2196F3; margin-bottom: 15px;">Commercial Intent Campaigns</h4>
+                <div style="font-size: 13px; margin-bottom: 15px;">
+                    <strong>Status:</strong> Day 8 of Learning Phase<br>
+                    <strong>Launch:</strong> November 5, 2025<br>
+                    <strong>Combined Spend:</strong> CHF 515.86
+                </div>
+                <div style="color: #2196F3; font-weight: bold; margin-bottom: 10px;">PREMATURE TO EVALUATE</div>
+                <ul class="bullet-points" style="font-size: 12px;">
+                    <li>English: CHF 4.06 avg CPC, 63 clicks</li>
+                    <li>German: CHF 4.00 avg CPC, 65 clicks</li>
+                    <li>Strong CTRs on specific keywords (5-10% range)</li>
+                    <li>Ad groups: Lab-Grown, Diamond Styles, Gift Jewelry, Luxury Rings</li>
+                    <li>Zero conversions expected this early</li>
+                </ul>
+                <div style="margin-top: 10px; padding: 10px; background: rgba(33, 150, 243, 0.2); border-radius: 5px; font-size: 12px;">
+                    <strong>Expectation:</strong> First conversions likely Days 15-21. Real performance data by Day 30. Current zero conversions mean nothing.
+                </div>
+            </div>
+            
+            <div class="competitor-section" style="border-color: #FF9800;">
+                <h4 style="color: #FF9800; margin-bottom: 15px;">Informational Intent Campaigns</h4>
+                <div style="font-size: 13px; margin-bottom: 15px;">
+                    <strong>Status:</strong> Day 8 of Learning Phase<br>
+                    <strong>Launch:</strong> November 5, 2025<br>
+                    <strong>Combined Spend:</strong> CHF 367.57
+                </div>
+                <div style="color: #FF9800; font-weight: bold; margin-bottom: 10px;">MONITOR CLOSELY</div>
+                <ul class="bullet-points" style="font-size: 12px;">
+                    <li>English: CHF 6.66 avg CPC (HIGH)</li>
+                    <li>German: CHF 3.68 avg CPC (reasonable)</li>
+                    <li>Both campaigns hit "limited by budget" status</li>
+                    <li>Ad groups: Educational content, Ring guidance</li>
+                    <li>Lower conversion intent than commercial campaigns</li>
+                </ul>
+                <div style="margin-top: 10px; padding: 10px; background: rgba(255, 152, 0, 0.2); border-radius: 5px; font-size: 12px;">
+                    <strong>Risk:</strong> If no conversions by Day 21, consider reducing budget to CHF 10-15/day and reallocating to commercial campaigns.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Competitive Landscape -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">04</div>
+        </div>
+        <div class="section-title">Swiss Market Competitive Analysis</div>
+        
+        <div class="highlight-box">
+            <h3>Market Position: Category Leader with Strong Competition</h3>
+            <p><strong>Iralis: 33.36% Impression Share | Top Position: 48.13% | Top of Page: 93.57%</strong></p>
+        </div>
+
+        <div class="performance-table">
+            <table>
+                <tr>
+                    <th>Competitor</th>
+                    <th>Type</th>
+                    <th>Impression Share</th>
+                    <th>Position Above Rate</th>
+                    <th>Top of Page Rate</th>
+                    <th>Assessment</th>
+                </tr>
+                <tr>
+                    <td><strong>Iralis</strong></td>
+                    <td>You</td>
+                    <td style="color: #4CAF50;">33.36%</td>
+                    <td>N/A</td>
+                    <td>93.57%</td>
+                    <td style="color: #4CAF50;">Market Leader</td>
+                </tr>
+                <tr>
+                    <td>diamondsfactory.ch</td>
+                    <td>Direct Competitor</td>
+                    <td>28.97%</td>
+                    <td>39.97%</td>
+                    <td>91.11%</td>
+                    <td style="color: #FF9800;">Close Behind</td>
+                </tr>
+                <tr>
+                    <td>uhrenschmuck24.ch</td>
+                    <td>Multi-Category</td>
+                    <td>24.97%</td>
+                    <td>37.02%</td>
+                    <td>92.68%</td>
+                    <td style="color: #FFC107;">Strong Player</td>
+                </tr>
+                <tr>
+                    <td>glamira.ch</td>
+                    <td>Customization</td>
+                    <td>24.76%</td>
+                    <td>36.59%</td>
+                    <td>87.64%</td>
+                    <td style="color: #FFC107;">Strong Player</td>
+                </tr>
+                <tr>
+                    <td>77diamonds.com</td>
+                    <td>International</td>
+                    <td>23.26%</td>
+                    <td>41.61%</td>
+                    <td>90.38%</td>
+                    <td style="color: #FFC107;">Strong Player</td>
+                </tr>
+                <tr>
+                    <td>meisterschmuck.ch</td>
+                    <td>Premium Swiss</td>
+                    <td>17.28%</td>
+                    <td style="color: #F44336;">77.90%</td>
+                    <td>94.80%</td>
+                    <td style="color: #FF9800;">Aggressive Bidding</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="two-column">
+            <div>
+                <div class="opportunity-box">
+                    <div class="tier-title">COMPETITIVE ADVANTAGES</div>
+                    <ul class="bullet-points" style="font-size: 13px;">
+                        <li><strong>Highest Impression Share:</strong> 33.36% means you're showing up most often in Swiss market</li>
+                        <li><strong>Top of Page Dominance:</strong> 93.57% of impressions appear above organic results</li>
+                        <li><strong>Lab-Grown Focus:</strong> Differentiation from traditional diamond retailers</li>
+                        <li><strong>Swiss Local Presence:</strong> Competing against international players with local advantage</li>
+                        <li><strong>Absolute Top Position:</strong> 48.13% of the time appearing in #1 spot</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <div class="tier-title" style="color: #FF9800;">COMPETITIVE THREATS</div>
+                    <ul class="bullet-points" style="font-size: 13px;">
+                        <li><strong>diamondsfactory.ch:</strong> Only 4.4 points behind in impression share, well-funded competitor</li>
+                        <li><strong>meisterschmuck.ch:</strong> Lower overall share but wins 77.90% when both appear - bidding very aggressively</li>
+                        <li><strong>Fragmented Market:</strong> Top 6 competitors within 10 percentage points creates pricing pressure</li>
+                        <li><strong>International Players:</strong> 77diamonds.com brings global scale and resources</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div>
+                <div class="section-title" style="font-size: 1.4em;">Key Competitor Strategies</div>
+                <div class="competitor-section">
+                    <h4 style="color: #cc5b27; margin-bottom: 10px;">diamondsfactory.ch</h4>
+                    <div style="font-size: 13px;">
+                        Primary threat with 28.97% share. Appears to be matching your bids closely. Likely focusing on similar keywords around lab-grown diamonds and modern engagement rings. Their position above rate of 39.97% shows they're not always outbidding you.
+                    </div>
+                </div>
+
+                <div class="competitor-section">
+                    <h4 style="color: #cc5b27; margin-bottom: 10px;">meisterschmuck.ch</h4>
+                    <div style="font-size: 13px;">
+                        Concerning pattern: lower impression share but winning 77.90% of head-to-head battles. This indicates very aggressive bidding on specific high-value keywords. Likely premium traditional jeweler with higher margins allowing aggressive CPC bids.
+                    </div>
+                </div>
+
+                <div class="competitor-section">
+                    <h4 style="color: #cc5b27; margin-bottom: 10px;">glamira.ch & 77diamonds.com</h4>
+                    <div style="font-size: 13px;">
+                        Both offering customization. glamira.ch at 24.76% and 77diamonds at 23.26% create mid-tier competitive pressure. These players likely targeting customization keywords that may overlap with personalization ad groups.
+                    </div>
+                </div>
+
+                <div class="issue-box">
+                    <div style="font-size: 13px;">
+                        <strong>Cost Implication:</strong> Multiple well-funded competitors bidding on same keywords drives up your CPCs. This explains CHF 4-6+ CPCs on commercial intent keywords while Shopping shows CHF 0.85 CPC.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Search Terms Crisis -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">05</div>
+        </div>
+        <div class="section-title">Shopping Campaign: Search Terms Quality Crisis</div>
+        
+        <div class="issue-box">
+            <div class="tier-title" style="color: #F44336;">CRITICAL ISSUE: MASSIVE IRRELEVANT TRAFFIC</div>
+            <div style="margin-top: 10px; font-size: 14px;">
+                Shopping campaign is serving impressions for hundreds of search terms completely unrelated to Iralis products. This wastes budget and dilutes performance. Analysis of 10,959 unique search terms reveals systematic problems across multiple categories.
+            </div>
+        </div>
+
+        <div class="two-column">
+            <div>
+                <div class="competitor-section" style="border-color: #F44336;">
+                    <h4 style="color: #F44336; margin-bottom: 15px;">Problem Category 1: Foreign Languages</h4>
+                    <div style="font-size: 13px; margin-bottom: 10px;">
+                        <strong>Languages Detected:</strong> French, Italian, Spanish, Portuguese, Turkish, Russian, Arabic, Japanese, Persian
+                    </div>
+                    <div class="data-table">
+                        <table>
+                            <tr><th>Language</th><th>Example Search Terms</th></tr>
+                            <tr><td>French</td><td>diamant 2 carat prix, bague fiancaille unique, collier cœur</td></tr>
+                            <tr><td>Italian</td><td>anello 2 carati, diamanti certificati prezzi, brillante 1 carato</td></tr>
+                            <tr><td>Turkish</td><td>pırlanta alyans kadın, pirlanta kupe, tektaş pırlanta yüzük</td></tr>
+                            <tr><td>Russian</td><td>серьги с бриллиантами тиффани, ожерелье</td></tr>
+                            <tr><td>Arabic</td><td>دستبند طلا اسپرت, انگشتر پشت حلقه</td></tr>
+                            <tr><td>Portuguese</td><td>anel de noivado, anel de compromisso</td></tr>
+                        </table>
+                    </div>
+                    <div style="margin-top: 10px; background: rgba(244, 67, 54, 0.3); padding: 10px; border-radius: 5px; font-size: 12px;">
+                        <strong>Impact:</strong> Users searching in these languages are not your target Swiss German/English audience. Zero conversion potential. Pure waste.
+                    </div>
+                </div>
+
+                <div class="competitor-section" style="border-color: #FF9800;">
+                    <h4 style="color: #FF9800; margin-bottom: 15px;">Problem Category 2: Competitor Brands</h4>
+                    <div style="font-size: 13px; margin-bottom: 10px;">
+                        <strong>Luxury brands users searching for:</strong>
+                    </div>
+                    <ul class="bullet-points" style="font-size: 12px;">
+                        <li>Cartier: "collier love cartier," "cartier armband männer"</li>
+                        <li>Tiffany: "tiffany engagement ring," "tiffany verlobungsring," "tiffany und co"</li>
+                        <li>Van Cleef: "van cleef collana," "wedding band van cleef"</li>
+                        <li>Chaumet: "josephine chaumet ring"</li>
+                        <li>Harry Winston: "kris jenner diamond ring," "harry winston wedding ring"</li>
+                        <li>Swarovski: Multiple variations</li>
+                        <li>Graff: "graff icon," "graff eternity ring"</li>
+                        <li>Messika: "messika rings," "messika earrings"</li>
+                        <li>Dodo Pomellato: "dodo by pomellato"</li>
+                    </ul>
+                    <div style="margin-top: 10px; background: rgba(255, 152, 0, 0.3); padding: 10px; border-radius: 5px; font-size: 12px;">
+                        <strong>Reality:</strong> Someone searching "tiffany engagement ring" wants Tiffany. They have strong brand preference. Not conversion candidates for Iralis.
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="competitor-section" style="border-color: #FF9800;">
+                    <h4 style="color: #FF9800; margin-bottom: 15px;">Problem Category 3: Wrong Product Types</h4>
+                    <div class="data-table">
+                        <table>
+                            <tr><th>Product Type</th><th>Examples</th></tr>
+                            <tr><td>Tennis Bracelets</td><td>bracciale tennis, tennis chain, collier tennis diamant</td></tr>
+                            <tr><td>Chains/Necklaces</td><td>gold chain, chaine cubaine, men's fine necklace</td></tr>
+                            <tr><td>Earrings</td><td>zirkon ohrringe, diamond ohrringe groß, schwarzer diamant ohrstecker</td></tr>
+                            <tr><td>Wedding Bands</td><td>partnerring, ehering frau, eheringe aus palladium</td></tr>
+                            <tr><td>Watches</td><td>kurz 1948 zürich (watch brand)</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="competitor-section" style="border-color: #FF9800;">
+                    <h4 style="color: #FF9800; margin-bottom: 15px;">Problem Category 4: Wrong Materials</h4>
+                    <div class="data-table">
+                        <table>
+                            <tr><th>Material</th><th>Examples</th></tr>
+                            <tr><td>Platinum</td><td>platinum rings, platin kette, platinring kaufen</td></tr>
+                            <tr><td>Silver</td><td>silber, 925, s925, revoni silver</td></tr>
+                            <tr><td>White Gold</td><td>weißgold ring, white gold, weissgold kette</td></tr>
+                            <tr><td>Rose Gold</td><td>rosegold ring verlobung, rotgold preis</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="competitor-section" style="border-color: #FFC107;">
+                    <h4 style="color: #FFC107; margin-bottom: 15px;">Problem Category 5: Informational Queries</h4>
+                    <ul class="bullet-points" style="font-size: 12px;">
+                        <li>"was ist ein karat diamant" (what is a carat diamond)</li>
+                        <li>"wieviel karat" queries (how many carats)</li>
+                        <li>"gold 585 wieviel karat" (how many carats is 585 gold)</li>
+                        <li>"was schenken 30 geburtstag" (gift ideas for 30th birthday)</li>
+                        <li>"how much is a gold chain worth"</li>
+                        <li>"diamant preis rechner" (diamond price calculator)</li>
+                    </ul>
+                </div>
+
+                <div class="competitor-section" style="border-color: #E91E63;">
+                    <h4 style="color: #E91E63; margin-bottom: 15px;">Problem Category 6: Used/Second-Hand</h4>
+                    <ul class="bullet-points" style="font-size: 12px;">
+                        <li>"second hand schmuck"</li>
+                        <li>"schmuck auktion schweiz"</li>
+                        <li>"occasion schmuck zürich"</li>
+                        <li>"gebraucht" (used)</li>
+                        <li>"verkaufen" (selling)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="opportunity-box" style="margin-top: 20px;">
+            <div class="tier-title">IMMEDIATE ACTION PLAN</div>
+            <div style="font-size: 14px;">
+                Upload comprehensive negative keyword list to Shopping campaign with minimum 200-300 terms. This should be done within 48 hours to stop budget waste. Estimated impact: reduce wasted impressions by 40-50%, improve conversion rate by better traffic quality, lower CPA through better targeting efficiency.
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6: Device & Timing Analysis -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">06</div>
+        </div>
+        <div class="section-title">Mobile-First Reality & Campaign Launch Timeline</div>
+        
+        <div class="highlight-box">
+            <h3>Critical Finding: 86% of All Traffic is Mobile</h3>
+            <p>Every strategic decision must prioritize mobile experience. All 3 conversions came from mobile devices.</p>
+        </div>
+
+        <div class="two-column">
+            <div>
+                <div class="section-title" style="font-size: 1.4em;">Device Performance Breakdown</div>
+                <div class="data-table">
+                    <table>
+                        <tr>
+                            <th>Device</th>
+                            <th>Impressions</th>
+                            <th>Clicks</th>
+                            <th>Share of Clicks</th>
+                            <th>Conversions</th>
+                        </tr>
+                        <tr>
+                            <td><strong>Mobile</strong></td>
+                            <td>62,551</td>
+                            <td style="color: #4CAF50;">465</td>
+                            <td style="color: #4CAF50;"><strong>86%</strong></td>
+                            <td style="color: #4CAF50;">3</td>
+                        </tr>
+                        <tr>
+                            <td>Desktop</td>
+                            <td>5,797</td>
+                            <td>70</td>
+                            <td>13%</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Tablet</td>
+                            <td>1,389</td>
+                            <td>6</td>
+                            <td>1%</td>
+                            <td>0</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="opportunity-box">
+                    <div class="tier-title">MOBILE STRATEGY IMPERATIVES</div>
+                    <ul class="bullet-points" style="font-size: 13px;">
+                        <li><strong>Landing Page UX:</strong> Must be flawless on mobile. Forms need to be short (3-5 fields max)</li>
+                        <li><strong>Page Speed:</strong> Mobile users won't wait. Target under 2 second load time</li>
+                        <li><strong>CTA Placement:</strong> Above the fold, large tap targets, clear action buttons</li>
+                        <li><strong>Image Optimization:</strong> High-quality product images that load fast on mobile networks</li>
+                        <li><strong>Ad Copy:</strong> Written for mobile screens - shorter headlines, punchy descriptions</li>
+                        <li><strong>Future Bid Adjustments:</strong> Consider +15-20% mobile bid modifier once campaigns mature</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <div class="tier-title" style="color: #FF9800;">MOBILE CONVERSION BARRIERS TO AUDIT</div>
+                    <ul class="bullet-points" style="font-size: 13px;">
+                        <li>Form fields requiring excessive typing on mobile keyboard</li>
+                        <li>Small tap targets causing mis-clicks and frustration</li>
+                        <li>Slow-loading product images eating mobile data</li>
+                        <li>Multi-step processes losing users between pages</li>
+                        <li>Phone number fields without auto-format</li>
+                        <li>Pop-ups blocking content on small screens</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div>
+                <div class="section-title" style="font-size: 1.4em;">Campaign Launch Timeline Analysis</div>
+                <div class="data-table">
+                    <table>
+                        <tr>
+                            <th>Date</th>
+                            <th>Clicks</th>
+                            <th>Cost</th>
+                            <th>Conv.</th>
+                            <th>Phase</th>
+                        </tr>
+                        <tr><td>Oct 15-20</td><td>6-7/day</td><td>CHF 4-5</td><td>0</td><td>Pre-Launch</td></tr>
+                        <tr><td>Oct 21-Nov 4</td><td>4-7/day</td><td>CHF 3-6</td><td>0</td><td>Baseline</td></tr>
+                        <tr style="background: rgba(255, 152, 0, 0.3);"><td><strong>Nov 5</strong></td><td style="color: #FF9800;"><strong>25</strong></td><td style="color: #FF9800;"><strong>CHF 21</strong></td><td>0</td><td><strong>LAUNCH</strong></td></tr>
+                        <tr><td>Nov 6</td><td>34</td><td>CHF 38</td><td>0</td><td>Learning Day 2</td></tr>
+                        <tr><td>Nov 7</td><td>50</td><td>CHF 143</td><td>0</td><td>Learning Day 3</td></tr>
+                        <tr><td>Nov 8</td><td>48</td><td>CHF 126</td><td>0</td><td>Learning Day 4</td></tr>
+                        <tr><td>Nov 9</td><td>54</td><td>CHF 172</td><td>0</td><td>Learning Day 5</td></tr>
+                        <tr style="background: rgba(76, 175, 80, 0.2);"><td><strong>Nov 10</strong></td><td>52</td><td>CHF 164</td><td style="color: #4CAF50;"><strong>1</strong></td><td>First Conv.</td></tr>
+                        <tr style="background: rgba(76, 175, 80, 0.2);"><td><strong>Nov 11</strong></td><td>58</td><td>CHF 148</td><td style="color: #4CAF50;"><strong>1</strong></td><td>Second Conv.</td></tr>
+                        <tr style="background: rgba(76, 175, 80, 0.2);"><td><strong>Nov 12</strong></td><td>48</td><td>CHF 119</td><td style="color: #4CAF50;"><strong>1</strong></td><td>Third Conv.</td></tr>
+                        <tr><td>Nov 13</td><td>49</td><td>CHF 138</td><td>0</td><td>Day 8</td></tr>
+                    </table>
+                </div>
+
+                <div class="competitor-section">
+                    <h4 style="color: #cc5b27; margin-bottom: 10px;">Timeline Pattern Analysis</h4>
+                    <div style="font-size: 13px;">
+                        <strong>Pre-Launch (Oct 15 - Nov 4):</strong> Steady baseline with only Shopping campaign active. CHF 4-6 daily spend, 5-7 clicks per day. Zero conversions yet but learning shopping campaign behavior.
+                    </div>
+                    <div style="font-size: 13px; margin-top: 10px;">
+                        <strong>Launch Day (Nov 5):</strong> Clear inflection point. Spend jumped to CHF 21, clicks to 25. All new search campaigns went live simultaneously. Google's algorithm begins exploration phase.
+                    </div>
+                    <div style="font-size: 13px; margin-top: 10px;">
+                        <strong>Learning Phase (Nov 6-13):</strong> Massive scale-up. Daily spend jumped to CHF 119-172. This is NORMAL Google behavior during early learning phase. The algorithm is testing different bids and placements aggressively.
+                    </div>
+                    <div style="font-size: 13px; margin-top: 10px;">
+                        <strong>First Conversions (Nov 10-12):</strong> All three conversions from Shopping campaign, all on mobile devices. New search campaigns still showing zero conversions but this is expected at Day 8.
+                    </div>
+                </div>
+
+                <div class="issue-box">
+                    <div style="font-size: 13px;">
+                        <strong>Budget Pacing Concern:</strong> At current CHF 140-150/day average, monthly spend projects to CHF 4,200-4,500. You're at budget ceiling with daily caps totaling CHF 140. This is why "limited by budget" warnings appear on some campaigns.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7: 30-Day Action Plan -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">07</div>
+        </div>
+        <div class="section-title">Realistic 30-Day Optimization Roadmap</div>
+        
+        <div class="highlight-box">
+            <h3>Primary Objective: Let Campaigns Learn While Fixing Critical Issues</h3>
+            <p>No major strategic changes during learning phase. Focus on negative keywords, tracking verification, and mobile optimization.</p>
+        </div>
+
+        <div class="roi-visual">
+            <div class="roi-box" style="border: 2px solid #F44336;">
+                <h4 style="color: #F44336;">Week 1</h4>
+                <div style="font-size: 13px;">Days 8-14<br>Crisis Management</div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="roi-box" style="border: 2px solid #FF9800;">
+                <h4 style="color: #FF9800;">Week 2</h4>
+                <div style="font-size: 13px;">Days 15-21<br>Monitor & Refine</div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="roi-box" style="border: 2px solid #FFC107;">
+                <h4 style="color: #FFC107;">Week 3</h4>
+                <div style="font-size: 13px;">Days 22-28<br>Early Optimization</div>
+            </div>
+            <div class="arrow">→</div>
+            <div class="roi-box" style="border: 2px solid #4CAF50;">
+                <h4 style="color: #4CAF50;">Week 4</h4>
+                <div style="font-size: 13px;">Days 29-35<br>Data-Driven Scaling</div>
+            </div>
+        </div>
+
+        <div class="two-column">
+            <div>
+                <div class="issue-box">
+                    <div class="tier-title" style="color: #F44336;">WEEK 1: IMMEDIATE ACTIONS (Days 8-14)</div>
+                    <ul class="bullet-points" style="font-size: 13px;">
+                        <li><strong>Negative Keywords Upload (Within 48 Hours):</strong>
+                            <ul style="margin-left: 20px; margin-top: 5px;">
+                                <li>Shopping campaign: 200-300 negative keywords</li>
+                                <li>Foreign languages in phrase match</li>
+                                <li>All competitor brands in phrase match</li>
+                                <li>Wrong product types (tennis bracelets, chains, etc.)</li>
+                                <li>Wrong materials (platinum, silver, white gold)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Conversion Tracking Verification:</strong>
+                            <ul style="margin-left: 20px; margin-top: 5px;">
+                                <li>Submit test form and verify it shows in Google Ads</li>
+                                <li>Check Klaviyo integration is passing data correctly</li>
+                                <li>Confirm GA4 events firing on key pages</li>
+                                <li>Address Milena's tracking concerns</li>
+                            </ul>
+                        </li>
+                        <li><strong>Mobile Landing Page Audit:</strong>
+                            <ul style="margin-left: 20px; margin-top: 5px;">
+                                <li>Test form completion on actual mobile devices</li>
+                                <li>Check page load speed on 4G connection</li>
+                                <li>Verify CTA visibility above the fold</li>
+                                <li>Review tap target sizes (min 44x44 pixels)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Budget Discipline:</strong>
+                            <ul style="margin-left: 20px; margin-top: 5px;">
+                                <li>NO budget increases during learning phase</li>
+                                <li>Monitor daily spend doesn't exceed CHF 150/day</li>
+                                <li>Accept "limited by budget" status as normal</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <div class="tier-title" style="color: #FF9800;">WEEK 2: MONITORING PHASE (Days 15-21)</div>
+                    <ul class="bullet-points" style="font-size: 13px;">
+                        <li><strong>Daily Performance Review:</strong>
+                            <ul style="margin-left: 20px; margin-top: 5px;">
+                                <li>Check for first conversions from search campaigns</li>
+                                <li>Monitor CPC stabilization patterns</li>
+                                <li>Review new search terms daily for negatives</li>
+                                <li>Watch impression share trends</li>
+                            </ul>
+                        </li>
+                        <li><strong>Keyword Performance Analysis:</strong>
+                            <ul style="margin-left: 20px; margin-top: 5px;">
+                                <li>Identify keywords with consistent impressions</li>
+                                <li>Pause "rarely served" keywords with 0 impressions</li>
+                                <li>Note high CTR keywords (>8%) for future bid increases</li>
+                            </ul>
+                        </li>
+                        <li><strong>Ad Copy Review:</strong>
+                            <ul style="margin-left: 20px; margin-top: 5px;">
+                                <li>Check which headlines and descriptions performing best</li>
+                                <li>Add more mobile-optimized shorter headlines</li>
+                                <li>Test value props: "Lab-Grown" vs "Sustainable" vs "Swiss Quality"</li>
+                            </ul>
+                        </li>
+                        <li><strong>Expected Milestone:</strong>
+                            <ul style="margin-left: 20px; margin-top: 5px;">
+                                <li>First 1-2 conversions likely from search campaigns</li>
+                                <li>If zero conversions by Day 21, flag for review</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div>
+                <div class="opportunity-box">
+                    <div class="tier-title" style="color: #4CAF50;">WEEK 3: EARLY OPTIMIZATION (Days 22-28)</div>
+                    <ul class="bullet-points" style="font-size: 13px;">
+                        <li><strong>Campaign Performance Decisions:</strong>
+                            <ul style="margin-left: 20px; margin-top: 5px;">
+                                <li>If Informational Intent showing no conversions: reduce budget to CHF 10-15/day</li>
+                                <li>If Commercial Intent converting: maintain current budgets</li>
+                                <li>If Shopping CPA rising: investigate quality score drops</li>
+                            </ul>
+                        </li>
+                        <li><strong>Bid Strategy Consideration:</strong>
+                            <ul style="margin-left: 20px; margin-top: 5px;">
+                                <li>Campaigns still in Maximize Clicks (appropriate for learning)</li>
+                                <li>If 10+ conversions achieved: test Target CPA at CHF 120</li>
+                                <li>Let Google's algorithm optimize for conversion volume</li>
+                            </ul>
+                        </li>
+                        <li><strong>Ad Schedule Analysis:</strong>
+                            <ul style="margin-left: 20px; margin-top: 5px;">
+                                <li>Review hourly performance data</li>
+                                <li>Identify peak conversion hours</li>
+                                <li>Prepare day-parting strategy for Month 2</li>
+                            </ul>
+                        </li>
+                        <li><strong>Geographic Expansion Assessment:</strong>
+                            <ul style="margin-left: 20px; margin-top: 5px;">
+                                <li>Discuss with Milena: ready for international shipping?</li>
+                                <li>Austria and Germany represent 5x larger German-speaking market</li>
+                                <li>If yes, prepare for Month 2 expansion</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tier-box">
+                    <div class="tier-title">WEEK 4: STRATEGIC DECISIONS (Days 29-35)</div>
+                    <ul class="bullet-points" style="font-size: 13px;">
+                        <li><strong>Major Performance Review:</strong>
+                            <ul style="margin-left: 20px; margin-top: 5px;">
+                                <li>Full 30-day performance analysis</li>
+                                <li>Portfolio CPA calculation with real data</li>
+                                <li>Conversion rate by campaign and device</li>
+                                <li>Lead quality assessment with Milena</li>
+                            </ul>
+                        </li>
+                        <li><strong>Scaling Decision Matrix:</strong>
+                            <ul style="margin-left: 20px; margin-top: 5px;">
+                                <li>If portfolio CPA <CHF 120: increase budgets 30-50%</li>
+                                <li>If portfolio CPA CHF 120-180: maintain current spend</li>
+                                <li>If portfolio CPA >CHF 180: reduce or pause underperformers</li>
+                            </ul>
+                        </li>
+                        <li><strong>Month 2 Strategy Development:</strong>
+                            <ul style="margin-left: 20px; margin-top: 5px;">
+                                <li>Budget reallocation based on winner campaigns</li>
+                                <li>New ad copy variations for top performers</li>
+                                <li>Expanded keyword list for converting ad groups</li>
+                                <li>Consider remarketing campaign activation</li>
+                            </ul>
+                        </li>
+                        <li><strong>Kill Criteria (Honest Assessment):</strong>
+                            <ul style="margin-left: 20px; margin-top: 5px;">
+                                <li>If <10 total conversions by Day 35: serious concern</li>
+                                <li>If search campaigns >CHF 250 CPA: pause and pivot to Shopping</li>
+                                <li>If lead quality is poor: reassess targeting and offer</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-number">5-8</span>
+                <div class="stat-label">Expected Conversions<br>by Week 3</div>
+            </div>
+            <div class="stat-card" style="border-color: #4CAF50;">
+                <span class="stat-number" style="color: #4CAF50;">CHF 150-180</span>
+                <div class="stat-label">Target Portfolio CPA<br>After Learning Phase</div>
+            </div>
+            <div class="stat-card" style="border-color: #2196F3;">
+                <span class="stat-number" style="color: #2196F3;">200-300</span>
+                <div class="stat-label">Negative Keywords<br>to Upload Week 1</div>
+            </div>
+            <div class="stat-card" style="border-color: #FF9800;">
+                <span class="stat-number" style="color: #FF9800;">30 Days</span>
+                <div class="stat-label">Time to Real Performance<br>Baseline Data</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 8: Budget & Tracking -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">08</div>
+        </div>
+        <div class="section-title">Budget Reality Check & Conversion Tracking Assessment</div>
+        
+        <div class="two-column">
+            <div>
+                <div class="section-title" style="font-size: 1.4em;">Current Budget Structure</div>
+                <div class="performance-table">
+                    <table>
+                        <tr>
+                            <th>Campaign</th>
+                            <th>Daily Budget</th>
+                            <th>Monthly Cap</th>
+                            <th>Actual Spend (30d)</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td>Commercial Intent ENG</td>
+                            <td>CHF 30</td>
+                            <td>CHF 900</td>
+                            <td>CHF 256</td>
+                            <td style="color: #4CAF50;">On Track</td>
+                        </tr>
+                        <tr>
+                            <td>Commercial Intent DEU</td>
+                            <td>CHF 30</td>
+                            <td>CHF 900</td>
+                            <td>CHF 260</td>
+                            <td style="color: #4CAF50;">On Track</td>
+                        </tr>
+                        <tr>
+                            <td>Informational Intent ENG</td>
+                            <td>CHF 20</td>
+                            <td>CHF 600</td>
+                            <td>CHF 213</td>
+                            <td style="color: #FF9800;">Limited by Budget</td>
+                        </tr>
+                        <tr>
+                            <td>Informational Intent DEU</td>
+                            <td>CHF 20</td>
+                            <td>CHF 600</td>
+                            <td>CHF 155</td>
+                            <td style="color: #FF9800;">Limited by Budget</td>
+                        </tr>
+                        <tr>
+                            <td>Shopping Best Sellers</td>
+                            <td>CHF 20</td>
+                            <td>CHF 600</td>
+                            <td>CHF 285</td>
+                            <td style="color: #4CAF50;">On Track</td>
+                        </tr>
+                        <tr>
+                            <td>Display (both campaigns)</td>
+                            <td>CHF 20</td>
+                            <td>CHF 600</td>
+                            <td>CHF 3</td>
+                            <td style="color: #2196F3;">Minimal Activity</td>
+                        </tr>
+                        <tr style="background: rgba(204, 91, 39, 0.3);">
+                            <td><strong>TOTAL</strong></td>
+                            <td><strong>CHF 140</strong></td>
+                            <td><strong>CHF 4,200</strong></td>
+                            <td><strong>CHF 1,171</strong></td>
+                            <td><strong>Month Prorated</strong></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="warning-box">
+                    <div class="tier-title" style="color: #FF9800;">BUDGET REALITY</div>
+                    <div style="font-size: 13px; margin-top: 10px;">
+                        <strong>Current Daily Spend:</strong> CHF 140-150 (Nov 6-13 average)
+                    </div>
+                    <div style="font-size: 13px; margin-top: 10px;">
+                        <strong>Monthly Projection:</strong> CHF 4,200-4,500 at current pace
+                    </div>
+                    <div style="font-size: 13px; margin-top: 10px;">
+                        <strong>Budget Ceiling:</strong> You're at maximum with daily caps totaling CHF 140
+                    </div>
+                    <div style="font-size: 13px; margin-top: 10px;">
+                        <strong>Limited by Budget:</strong> Both Informational Intent campaigns hitting limits because CPCs higher than expected
+                    </div>
+                </div>
+
+                <div class="opportunity-box">
+                    <div class="tier-title">MONTH 2 BUDGET SCENARIOS</div>
+                    <div style="font-size: 13px; margin-top: 10px;">
+                        <strong>Scenario A: Search Campaigns Perform Well</strong> (CPA <CHF 150)
+                    </div>
+                    <ul class="bullet-points" style="font-size: 12px;">
+                        <li>Commercial Intent ENG: CHF 45/day (+50%)</li>
+                        <li>Commercial Intent DEU: CHF 45/day (+50%)</li>
+                        <li>Informational: Maintain or reduce based on performance</li>
+                        <li>Shopping: CHF 30/day (+50%)</li>
+                        <li><strong>Total: CHF 180-200/day = CHF 5,400-6,000/month</strong></li>
+                    </ul>
+                    <div style="font-size: 13px; margin-top: 10px;">
+                        <strong>Scenario B: Search Campaigns Struggle</strong> (CPA >CHF 200)
+                    </div>
+                    <ul class="bullet-points" style="font-size: 12px;">
+                        <li>Commercial Intent: Reduce to CHF 20/day each</li>
+                        <li>Informational: Pause completely</li>
+                        <li>Shopping: Increase to CHF 50-60/day (proven winner)</li>
+                        <li><strong>Total: CHF 100-120/day = CHF 3,000-3,600/month</strong></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div>
+                <div class="section-title" style="font-size: 1.4em;">Conversion Tracking Analysis</div>
+                
+                <div class="competitor-section">
+                    <h4 style="color: #cc5b27; margin-bottom: 10px;">Conversion Actions Being Tracked</h4>
+                    <div class="data-table">
+                        <table>
+                            <tr><th>Conversion Action</th><th>Conv.</th><th>Status</th></tr>
+                            <tr style="background: rgba(76, 175, 80, 0.2);"><td>Klaviyo Form Submit</td><td style="color: #4CAF50;"><strong>3</strong></td><td>PRIMARY - Working</td></tr>
+                            <tr><td>Google Shopping App - Page View</td><td>0</td><td>Not Firing</td></tr>
+                            <tr><td>Google Shopping App - View Item</td><td>0</td><td>Not Firing</td></tr>
+                            <tr><td>Google Shopping App - Add to Cart</td><td>0</td><td>Not Firing</td></tr>
+                            <tr><td>Google Shopping App - Begin Checkout</td><td>0</td><td>Not Firing</td></tr>
+                            <tr><td>HM | Add to cart</td><td>0</td><td>Not Firing</td></tr>
+                            <tr><td>Email Click</td><td>0</td><td>Not Firing</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="issue-box">
+                    <div class="tier-title" style="color: #F44336;">TRACKING CONCERNS</div>
+                    <ul class="bullet-points" style="font-size: 13px;">
+                        <li><strong>Milena's Reported Concern:</strong> She mentioned wanting proper GA4 and Klaviyo tracking setup, suggesting current configuration may not be complete</li>
+                        <li><strong>Micro-Conversions Not Firing:</strong> Page View, View Item, Add to Cart events showing zero activity. Either not configured or not firing properly</li>
+                        <li><strong>Multiple Conversion Actions:</strong> Seven different actions create complexity. Recommend simplifying to 2-3 primary actions</li>
+                        <li><strong>No Evidence of Double-Counting:</strong> With only 3 conversions total, we can confirm no duplication issues currently</li>
+                    </ul>
+                </div>
+
+                <div class="opportunity-box">
+                    <div class="tier-title">RECOMMENDED TRACKING SETUP</div>
+                    <div style="font-size: 13px; margin-top: 10px;">
+                        <strong>Primary Conversion (What Matters):</strong>
+                    </div>
+                    <ul class="bullet-points" style="font-size: 12px;">
+                        <li>Klaviyo Form Submit - Keep as primary goal</li>
+                        <li>This represents actual lead generation</li>
+                        <li>Currently working correctly</li>
+                    </ul>
+                    <div style="font-size: 13px; margin-top: 10px;">
+                        <strong>Secondary Conversion (For Smart Bidding):</strong>
+                    </div>
+                    <ul class="bullet-points" style="font-size: 12px;">
+                        <li>Add to Cart - Micro-conversion signal</li>
+                        <li>Helps Google learn user behavior patterns</li>
+                        <li>Currently not firing - needs GTM fix</li>
+                    </ul>
+                    <div style="font-size: 13px; margin-top: 10px;">
+                        <strong>Engagement Metrics (For Remarketing):</strong>
+                    </div>
+                    <ul class="bullet-points" style="font-size: 12px;">
+                        <li>View Item on engagement ring pages</li>
+                        <li>Builds remarketing audiences</li>
+                        <li>Not critical but useful when volume increases</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <div class="tier-title" style="color: #FF9800;">WEEK 1 TRACKING VERIFICATION TASKS</div>
+                    <ul class="bullet-points" style="font-size: 13px;">
+                        <li>Submit test form submission and verify it appears in Google Ads within 24 hours</li>
+                        <li>Check Google Tag Manager to confirm all event tags are firing correctly</li>
+                        <li>Verify Klaviyo integration is passing form data back to Google Ads</li>
+                        <li>Test GA4 event tracking on engagement ring guide page</li>
+                        <li>Confirm conversion tracking tag is on thank-you page after form submit</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 9: Risk Assessment -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">09</div>
+        </div>
+        <div class="section-title">Honest Risk Assessment & Success Criteria</div>
+        
+        <div class="performance-table">
+            <table>
+                <tr>
+                    <th>Risk Category</th>
+                    <th>Probability</th>
+                    <th>Impact</th>
+                    <th>Scenario Description</th>
+                    <th>Mitigation Strategy</th>
+                </tr>
+                <tr>
+                    <td><strong>Extended Learning Phase</strong></td>
+                    <td style="color: #FF9800;">Medium</td>
+                    <td style="color: #F44336;">High</td>
+                    <td>Low conversion volume prevents campaigns from ever exiting learning phase</td>
+                    <td>Consider consolidating campaigns by Day 30 if no conversions. May need to increase budgets to drive more traffic volume.</td>
+                </tr>
+                <tr>
+                    <td><strong>CPA Inflation</strong></td>
+                    <td style="color: #FF9800;">Medium-High</td>
+                    <td style="color: #F44336;">High</td>
+                    <td>Search campaigns stabilize at CHF 200-300 CPA due to high competition and low volume</td>
+                    <td>Target CPA bidding capped at CHF 120. Aggressive negative keyword management. Potentially pause underperforming campaigns and focus budget on Shopping.</td>
+                </tr>
+                <tr>
+                    <td><strong>Seasonality Impact</strong></td>
+                    <td style="color: #F44336;">High</td>
+                    <td style="color: #FF9800;">Medium</td>
+                    <td>November-December have lower engagement ring search volume than peak season</td>
+                    <td>Accept softer performance through holidays. Don't panic if CPAs rise in December. Prepare for Q1 2026 peak season with refined campaigns.</td>
+                </tr>
+                <tr>
+                    <td><strong>Budget Depletion</strong></td>
+                    <td style="color: #4CAF50;">Low</td>
+                    <td style="color: #F44336;">High</td>
+                    <td>Spend CHF 5,000+ over 60 days with fewer than 20 quality leads</td>
+                    <td>Weekly performance reviews. Pause campaigns if CPA exceeds CHF 250 by Week 4. Have clear kill criteria discussed with Milena upfront.</td>
+                </tr>
+                <tr>
+                    <td><strong>Tracking Issues</strong></td>
+                    <td style="color: #FFC107;">Low-Medium</td>
+                    <td style="color: #F44336;">High</td>
+                    <td>Conversions happening but not being tracked properly in Google Ads</td>
+                    <td>Week 1 verification with test submissions. Check conversion pixel on thank-you page. Confirm Klaviyo integration passing data correctly.</td>
+                </tr>
+                <tr>
+                    <td><strong>Poor Lead Quality</strong></td>
+                    <td style="color: #FFC107;">Unknown</td>
+                    <td style="color: #F44336;">High</td>
+                    <td>Leads converting but not serious buyers or not matching target customer profile</td>
+                    <td>Week 3 lead quality review with Milena. Assess if form needs pre-qualification questions. May need landing page messaging adjustments.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="two-column">
+            <div>
+                <div class="warning-box">
+                    <div class="tier-title" style="color: #FF9800;">REALISTIC SUCCESS METRICS</div>
+                    <div style="font-size: 13px; margin-top: 10px;">
+                        <strong>Week 2-3 Expectations (Days 14-21):</strong>
+                    </div>
+                    <ul class="bullet-points" style="font-size: 12px;">
+                        <li>Total Conversions: 5-8 (including 2-4 from search)</li>
+                        <li>Portfolio CPA: CHF 180-220</li>
+                        <li>Daily Click Volume: Stable at 15-25</li>
+                        <li>Search Impression Share: Maintain 30-35%</li>
+                    </ul>
+                    <div style="font-size: 13px; margin-top: 10px;">
+                        <strong>Week 4-5 Expectations (Days 22-35):</strong>
+                    </div>
+                    <ul class="bullet-points" style="font-size: 12px;">
+                        <li>Total Conversions: 8-15</li>
+                        <li>Portfolio CPA: CHF 140-180</li>
+                        <li>Search Campaign CPA: Under CHF 150</li>
+                        <li>Shopping Campaign CPA: CHF 80-100</li>
+                    </ul>
+                    <div style="font-size: 13px; margin-top: 10px;">
+                        <strong>Month 2 Targets (December):</strong>
+                    </div>
+                    <ul class="bullet-points" style="font-size: 12px;">
+                        <li>Total Conversions: 20-30 for the month</li>
+                        <li>Portfolio CPA: CHF 120-150</li>
+                        <li>Monthly Spend: CHF 4,200-4,500</li>
+                        <li>Average CPC: Stabilize at CHF 2.50-3.50</li>
+                    </ul>
+                </div>
+
+                <div class="issue-box">
+                    <div class="tier-title" style="color: #F44336;">KILL CRITERIA - WHEN TO PIVOT</div>
+                    <ul class="bullet-points" style="font-size: 13px;">
+                        <li><strong>By Day 21:</strong> If search campaigns have exactly zero conversions, flag for serious review</li>
+                        <li><strong>By Day 30:</strong> If total portfolio conversions are fewer than 10, consider major restructure</li>
+                        <li><strong>By Day 35:</strong> If search campaign CPA exceeds CHF 250, pause them and focus all budget on Shopping</li>
+                        <li><strong>Lead Quality:</strong> If Milena reports leads are unqualified tire-kickers, need targeting and messaging overhaul</li>
+                        <li><strong>Budget Threshold:</strong> If spending CHF 4,500+ per month with fewer than 30 leads, ROI becomes questionable for jewelry price points</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div>
+                <div class="opportunity-box">
+                    <div class="tier-title" style="color: #4CAF50;">SUCCESS PROBABILITY ASSESSMENT</div>
+                    <div style="font-size: 13px; margin-top: 10px;">
+                        <strong>What We Know Is Working (90% Confidence):</strong>
+                    </div>
+                    <ul class="bullet-points" style="font-size: 12px;">
+                        <li>Shopping campaign converts at CHF 95 CPA - proven model</li>
+                        <li>Mobile traffic engages well (86% of clicks)</li>
+                        <li>Market leadership position with 33% impression share</li>
+                        <li>Campaign architecture is sound (intent-based segmentation)</li>
+                    </ul>
+                    <div style="font-size: 13px; margin-top: 10px;">
+                        <strong>What Looks Promising (60% Confidence):</strong>
+                    </div>
+                    <ul class="bullet-points" style="font-size: 12px;">
+                        <li>Strong CTRs on specific keywords (5-10% range)</li>
+                        <li>German commercial intent outperforming English slightly</li>
+                        <li>Keyword quality scores appear good based on CTR</li>
+                        <li>Competitive positioning allows for scaling</li>
+                    </ul>
+                    <div style="font-size: 13px; margin-top: 10px;">
+                        <strong>What's Unknown (Need More Data):</strong>
+                    </div>
+                    <ul class="bullet-points" style="font-size: 12px;">
+                        <li>Search campaign conversion rates (too early)</li>
+                        <li>Lead quality and sales conversion rate</li>
+                        <li>Seasonal impact on November-December performance</li>
+                        <li>Landing page conversion rate by traffic source</li>
+                        <li>Customer lifetime value and repeat purchase rate</li>
+                    </ul>
+                </div>
+
+                <div class="competitor-section">
+                    <h4 style="color: #cc5b27; margin-bottom: 10px;">Honest Perspective from Charles</h4>
+                    <div style="font-size: 13px;">
+                        If this were my own business or a close friend asking for advice, here's what I'd say: The campaigns are set up correctly. Julia did solid foundational work. But it's genuinely too early to know if this will work at scale.
+                    </div>
+                    <div style="font-size: 13px; margin-top: 10px;">
+                        Lab-grown diamond jewelry is a competitive space with high CPCs. CHF 100-150 per lead is realistic if the leads are quality. The question isn't whether Google Ads CAN work for Iralis - it's whether the economics make sense at your average order value and conversion rate.
+                    </div>
+                    <div style="font-size: 13px; margin-top: 10px;">
+                        Give it the full 30 days. If by December 5th you're not seeing 2-3 qualified leads per week at CHF 120-150 CPA, we need to have a serious conversation about whether paid search is the right primary channel or if budget should shift to SEO, email nurturing, or social proof building.
+                    </div>
+                    <div style="font-size: 13px; margin-top: 10px;">
+                        No fluff. No promises of 10x returns. Just realistic expectation-setting and disciplined optimization. That's the approach that works.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 10: Final Recommendations -->
+    <div class="slide">
+        <div class="slide-header">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo">
+            <div class="slide-number">10</div>
+        </div>
+        <div class="main-title" style="font-size: 2.5em;">Strategic Recommendations</div>
+        <div class="subtitle">Next Steps for Learning Phase Success</div>
+        
+        <div class="highlight-box">
+            <h3>Primary Recommendation: Patience with Strategic Interventions</h3>
+            <div class="two-column" style="text-align: left;">
+                <div>
+                    <ul class="bullet-points">
+                        <li>Let learning phase complete (21-30 days minimum)</li>
+                        <li>Upload 200-300 negative keywords to Shopping campaign immediately</li>
+                        <li>Verify conversion tracking with test form submissions</li>
+                        <li>Maintain current budgets through end of November</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="bullet-points">
+                        <li>Focus optimization on mobile experience (86% of traffic)</li>
+                        <li>Weekly performance reviews to catch issues early</li>
+                        <li>Major strategic review at Day 30 (December 5th)</li>
+                        <li>Scaling or pivoting decisions by Day 45 (December 20th)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="performance-table">
+            <table>
+                <tr>
+                    <th style="background: #cc5b27;">Key Metric</th>
+                    <th>Current State<br>(Day 8)</th>
+                    <th>Week 3 Target<br>(Day 21)</th>
+                    <th>Month End Target<br>(Day 30)</th>
+                    <th>Success Indicator</th>
+                </tr>
+                <tr>
+                    <td><strong>Total Conversions</strong></td>
+                    <td>3</td>
+                    <td>6-10</td>
+                    <td>12-18</td>
+                    <td style="color: #4CAF50;">Quality leads, not just volume</td>
+                </tr>
+                <tr>
+                    <td><strong>Portfolio CPA</strong></td>
+                    <td>CHF 390</td>
+                    <td>CHF 180-220</td>
+                    <td>CHF 120-150</td>
+                    <td style="color: #4CAF50;">Below CHF 150 = Success</td>
+                </tr>
+                <tr>
+                    <td><strong>Search Campaign Conv.</strong></td>
+                    <td>0</td>
+                    <td>2-4</td>
+                    <td>5-10</td>
+                    <td style="color: #4CAF50;">Any conversions = Good signal</td>
+                </tr>
+                <tr>
+                    <td><strong>Shopping CPA</strong></td>
+                    <td>CHF 95</td>
+                    <td>CHF 85-105</td>
+                    <td>CHF 80-100</td>
+                    <td style="color: #4CAF50;">Maintain under CHF 110</td>
+                </tr>
+                <tr>
+                    <td><strong>Daily Budget Spend</strong></td>
+                    <td>CHF 140-150</td>
+                    <td>CHF 140</td>
+                    <td>CHF 140</td>
+                    <td style="color: #4CAF50;">Stay within monthly cap</td>
+                </tr>
+                <tr>
+                    <td><strong>Mobile Conv. Rate</strong></td>
+                    <td>0.005%</td>
+                    <td>0.5-1.0%</td>
+                    <td>1.0-2.0%</td>
+                    <td style="color: #4CAF50;">Above 1% = Excellent</td>
+                </tr>
+                <tr>
+                    <td><strong>Impression Share</strong></td>
+                    <td>33.36%</td>
+                    <td>30-35%</td>
+                    <td>32-36%</td>
+                    <td style="color: #4CAF50;">Maintain market leadership</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card" style="border-color: #4CAF50;">
+                <span class="stat-number" style="color: #4CAF50;">CHF 95</span>
+                <div class="stat-label">Current Working CPA<br>(Shopping Campaign)</div>
+            </div>
+            <div class="stat-card" style="border-color: #2196F3;">
+                <span class="stat-number" style="color: #2196F3;">21 Days</span>
+                <div class="stat-label">Minimum Learning Phase<br>Before Valid Assessment</div>
+            </div>
+            <div class="stat-card" style="border-color: #FF9800;">
+                <span class="stat-number" style="color: #FF9800;">86%</span>
+                <div class="stat-label">Mobile Traffic Share<br>Must Optimize Mobile UX</div>
+            </div>
+            <div class="stat-card" style="border-color: #E91E63;">
+                <span class="stat-number" style="color: #E91E63;">33.36%</span>
+                <div class="stat-label">Market Leadership Position<br>Highest Impression Share</div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <div style="font-size: 1.4em; margin-bottom: 20px;">
+                <strong>NEXT STEPS: WEEK 1 PRIORITY ACTIONS</strong>
+            </div>
+            <div style="font-size: 1.1em;">
+                <strong>1. Negative Keywords:</strong> Upload 200-300 terms to Shopping campaign within 48 hours<br>
+                <strong>2. Tracking Verification:</strong> Test form submissions and confirm Google Ads recording<br>
+                <strong>3. Mobile Audit:</strong> Test landing page experience on actual mobile devices<br>
+                <strong>4. Budget Discipline:</strong> No increases during learning phase - maintain CHF 140/day<br>
+                <strong>5. Weekly Check-in:</strong> Schedule performance reviews every Monday through November
+            </div>
+            <div style="margin-top: 20px; font-size: 1em; opacity: 0.9;">
+                <strong>Major Decision Point: December 5, 2025 (Day 30)</strong><br>
+                Full performance assessment with scaling or pivoting recommendations based on actual conversion data
+            </div>
+        </div>
+    </div>
+</body>
+</html>
