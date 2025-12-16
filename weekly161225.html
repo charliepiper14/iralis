@@ -1,0 +1,1899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iralis Jewelry | Q1 2026 Strategic Roadmap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #162642;
+            --primary-mid: #1a2d4f;
+            --primary-light: #243a5e;
+            --accent-orange: #cc5b27;
+            --accent-orange-light: #e07040;
+            --accent-gold: #c9a962;
+            --text-light: #ffffff;
+            --text-muted: #a8b5c8;
+            --text-dark: #0d1520;
+            --success: #2ecc71;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+            --card-bg: rgba(255,255,255,0.03);
+            --card-border: rgba(255,255,255,0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-mid) 50%, var(--primary-light) 100%);
+            color: var(--text-light);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .slide-container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        .slide {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 60px 0;
+            position: relative;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .slide:last-child {
+            border-bottom: none;
+        }
+
+        /* Header Styling */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo-mark {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-light));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 20px;
+            color: white;
+            box-shadow: 0 4px 20px rgba(204, 91, 39, 0.3);
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .logo-text span {
+            color: var(--accent-orange);
+        }
+
+        .date-badge {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--text-light), var(--accent-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 500;
+            margin-bottom: 30px;
+            color: var(--text-light);
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        h4 {
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-orange);
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--text-muted);
+        }
+
+        .subtitle {
+            font-size: 22px;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        /* Slide Number */
+        .slide-number {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            font-family: 'Playfair Display', serif;
+            font-size: 120px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.03);
+            line-height: 1;
+        }
+
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 35px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-orange), var(--accent-gold));
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-light));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 16px;
+        }
+
+        /* Metric Cards */
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .metric-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .metric-card.highlight {
+            border-color: var(--accent-orange);
+            box-shadow: 0 0 30px rgba(204, 91, 39, 0.2);
+        }
+
+        .metric-card.success {
+            border-color: var(--success);
+        }
+
+        .metric-card.warning {
+            border-color: var(--warning);
+        }
+
+        .metric-card.danger {
+            border-color: var(--danger);
+        }
+
+        .metric-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--text-light), var(--accent-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .metric-card.danger .metric-value {
+            background: linear-gradient(135deg, var(--danger), #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .metric-card.success .metric-value {
+            background: linear-gradient(135deg, var(--success), #5dde8d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .metric-label {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .metric-change {
+            font-size: 14px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .metric-change.positive {
+            background: rgba(46, 204, 113, 0.15);
+            color: var(--success);
+        }
+
+        .metric-change.negative {
+            background: rgba(231, 76, 60, 0.15);
+            color: var(--danger);
+        }
+
+        .metric-change.neutral {
+            background: rgba(243, 156, 18, 0.15);
+            color: var(--warning);
+        }
+
+        /* Tables */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--card-border);
+        }
+
+        .data-table th {
+            background: rgba(204, 91, 39, 0.15);
+            padding: 18px 20px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-orange);
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .data-table td {
+            padding: 18px 20px;
+            border-bottom: 1px solid var(--card-border);
+            font-size: 15px;
+            color: var(--text-light);
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .data-table tr:hover td {
+            background: rgba(255,255,255,0.02);
+        }
+
+        .data-table .highlight-row td {
+            background: rgba(204, 91, 39, 0.08);
+        }
+
+        /* Status Badges */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .status-badge.active {
+            background: rgba(46, 204, 113, 0.15);
+            color: var(--success);
+        }
+
+        .status-badge.inactive {
+            background: rgba(168, 181, 200, 0.15);
+            color: var(--text-muted);
+        }
+
+        .status-badge.warning {
+            background: rgba(243, 156, 18, 0.15);
+            color: var(--warning);
+        }
+
+        .status-badge.critical {
+            background: rgba(231, 76, 60, 0.15);
+            color: var(--danger);
+        }
+
+        .status-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: currentColor;
+        }
+
+        /* Progress Bars */
+        .progress-container {
+            margin: 25px 0;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+
+        .progress-fill.orange {
+            background: linear-gradient(90deg, var(--accent-orange), var(--accent-orange-light));
+        }
+
+        .progress-fill.gold {
+            background: linear-gradient(90deg, var(--accent-gold), #ddc07a);
+        }
+
+        .progress-fill.success {
+            background: linear-gradient(90deg, var(--success), #5dde8d);
+        }
+
+        /* Two Column Layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin: 40px 0;
+        }
+
+        .three-col {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        /* Alert Boxes */
+        .alert-box {
+            padding: 25px 30px;
+            border-radius: 16px;
+            margin: 25px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .alert-box.critical {
+            background: rgba(231, 76, 60, 0.1);
+            border: 1px solid rgba(231, 76, 60, 0.3);
+        }
+
+        .alert-box.warning {
+            background: rgba(243, 156, 18, 0.1);
+            border: 1px solid rgba(243, 156, 18, 0.3);
+        }
+
+        .alert-box.success {
+            background: rgba(46, 204, 113, 0.1);
+            border: 1px solid rgba(46, 204, 113, 0.3);
+        }
+
+        .alert-box.info {
+            background: rgba(204, 91, 39, 0.1);
+            border: 1px solid rgba(204, 91, 39, 0.3);
+        }
+
+        .alert-icon {
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+
+        .alert-content h4 {
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .alert-content p {
+            font-size: 15px;
+            margin: 0;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            margin: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent-orange), var(--accent-gold));
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 35px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            background: var(--accent-orange);
+            border-radius: 50%;
+            border: 3px solid var(--primary-dark);
+        }
+
+        .timeline-item h4 {
+            color: var(--text-light);
+            font-size: 18px;
+            margin-bottom: 8px;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+
+        .timeline-date {
+            font-size: 13px;
+            color: var(--accent-orange);
+            margin-bottom: 10px;
+        }
+
+        /* Action Items */
+        .action-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .action-list li {
+            padding: 18px 25px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: transform 0.2s ease;
+        }
+
+        .action-list li:hover {
+            transform: translateX(5px);
+        }
+
+        .action-priority {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .action-priority.high {
+            background: var(--danger);
+            box-shadow: 0 0 10px var(--danger);
+        }
+
+        .action-priority.medium {
+            background: var(--warning);
+            box-shadow: 0 0 10px var(--warning);
+        }
+
+        .action-priority.low {
+            background: var(--success);
+            box-shadow: 0 0 10px var(--success);
+        }
+
+        /* Charts placeholder */
+        .chart-container {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 30px;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .bar-chart {
+            flex: 1;
+            display: flex;
+            align-items: flex-end;
+            gap: 20px;
+            padding-top: 20px;
+        }
+
+        .bar-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .bar {
+            width: 100%;
+            max-width: 60px;
+            border-radius: 8px 8px 0 0;
+            transition: height 0.5s ease;
+        }
+
+        .bar.primary {
+            background: linear-gradient(to top, var(--accent-orange), var(--accent-orange-light));
+        }
+
+        .bar.secondary {
+            background: linear-gradient(to top, var(--accent-gold), #ddc07a);
+        }
+
+        .bar-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        /* Footer */
+        .slide-footer {
+            margin-top: auto;
+            padding-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--card-border);
+        }
+
+        .footer-note {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .page-indicator {
+            display: flex;
+            gap: 8px;
+        }
+
+        .page-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--card-border);
+        }
+
+        .page-dot.active {
+            background: var(--accent-orange);
+            width: 24px;
+            border-radius: 4px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .metric-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .two-col, .three-col {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide-container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 36px;
+            }
+            h2 {
+                font-size: 28px;
+            }
+            .metric-grid {
+                grid-template-columns: 1fr;
+            }
+            .header {
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .slide {
+                page-break-after: always;
+                min-height: auto;
+                padding: 40px 0;
+            }
+            body {
+                background: white;
+                color: #333;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        
+        <!-- SLIDE 1: Title -->
+        <section class="slide">
+            <div class="header">
+                <div class="logo-section">
+                    <div class="logo-mark">HM</div>
+                    <div class="logo-text">Heath<span>Media</span></div>
+                </div>
+                <div class="date-badge">December 16, 2025</div>
+            </div>
+            <div class="slide-number">01</div>
+            
+            <div style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+                <h4>Strategic Performance Review</h4>
+                <h1>Iralis Jewelry<br>Q1 2026 Roadmap</h1>
+                <p class="subtitle">Comprehensive analysis of Meta & Google Ads performance with strategic recommendations for sustainable growth ahead of April 2026.</p>
+                
+                <div class="card-grid" style="margin-top: 60px;">
+                    <div class="card">
+                        <div class="card-icon">📊</div>
+                        <h3>Performance Analysis</h3>
+                        <p>Deep dive into Nov-Dec 2025 campaign metrics across both platforms with period-over-period comparisons.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🎯</div>
+                        <h3>Strategic Priorities</h3>
+                        <p>Critical action items including conversion tracking resolution and campaign consolidation.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🗓️</div>
+                        <h3>Q1 2026 Roadmap</h3>
+                        <p>Month-by-month execution plan optimized for budget efficiency with reduced oversight needs.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide-footer">
+                <span class="footer-note">Prepared for Milena Scheidegger | Iralis Jewelry</span>
+                <div class="page-indicator">
+                    <div class="page-dot active"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 2: Executive Summary -->
+        <section class="slide">
+            <div class="header">
+                <div class="logo-section">
+                    <div class="logo-mark">HM</div>
+                    <div class="logo-text">Heath<span>Media</span></div>
+                </div>
+                <div class="date-badge">Executive Summary</div>
+            </div>
+            <div class="slide-number">02</div>
+            
+            <h2>Key Findings & Priorities</h2>
+            <p class="subtitle">Critical insights from the Nov 16 - Dec 15, 2025 performance period requiring immediate attention.</p>
+            
+            <div class="alert-box warning">
+                <div class="alert-icon">⚠️</div>
+                <div class="alert-content">
+                    <h4>Christmas Campaign Requires Immediate Review</h4>
+                    <p>Ready to Ship campaign showing 0 leads despite +470% spend increase (CHF 78.84 vs CHF 13.90 prior). Consider pausing or pivoting creative strategy before further budget allocation.</p>
+                </div>
+            </div>
+            
+            <div class="two-col">
+                <div>
+                    <h3 style="color: var(--success);">✓ What's Working</h3>
+                    <ul class="action-list">
+                        <li>
+                            <span class="action-priority low"></span>
+                            <div>
+                                <strong>Meta Lead Gen (Diamond Pieces)</strong><br>
+                                <span style="color: var(--text-muted); font-size: 14px;">CHF 5.13 CPL (Dec) — 116 total leads at CHF 7.59 avg</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="action-priority low"></span>
+                            <div>
+                                <strong>Google Shopping Performance</strong><br>
+                                <span style="color: var(--text-muted); font-size: 14px;">CHF 0.89 CPC — 25.36% impression share (+153% growth)</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="action-priority low"></span>
+                            <div>
+                                <strong>Showroom Event Campaign</strong><br>
+                                <span style="color: var(--text-muted); font-size: 14px;">35 RSVPs at CHF 1.36 cost per RSVP for Dec 21 event</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="action-priority low"></span>
+                            <div>
+                                <strong>Video Creative Outperformance</strong><br>
+                                <span style="color: var(--text-muted); font-size: 14px;">Maison Gassmann video: 19 leads at CHF 5.86 CPL</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color: var(--danger);">✗ Requiring Attention</h3>
+                    <ul class="action-list">
+                        <li>
+                            <span class="action-priority high"></span>
+                            <div>
+                                <strong>Christmas Campaign Underperforming</strong><br>
+                                <span style="color: var(--text-muted); font-size: 14px;">0 leads vs 13 prior period despite +470% spend increase</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="action-priority medium"></span>
+                            <div>
+                                <strong>Multiple Inactive Campaigns</strong><br>
+                                <span style="color: var(--text-muted); font-size: 14px;">BOF Website Leads, Engagement Ring campaigns not delivering</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="action-priority medium"></span>
+                            <div>
+                                <strong>Budget Constraints</strong><br>
+                                <span style="color: var(--text-muted); font-size: 14px;">All Search campaigns limited by budget — missed opportunities</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="action-priority medium"></span>
+                            <div>
+                                <strong>Engagement Ring CPL Too High</strong><br>
+                                <span style="color: var(--text-muted); font-size: 14px;">CHF 23.17 vs CHF 7.59 for Diamond Pieces — consolidate budget</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="slide-footer">
+                <span class="footer-note">Data Period: Nov 16 - Dec 15, 2025 vs Oct 17 - Nov 15, 2025</span>
+                <div class="page-indicator">
+                    <div class="page-dot"></div>
+                    <div class="page-dot active"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 3: Google Ads Performance -->
+        <section class="slide">
+            <div class="header">
+                <div class="logo-section">
+                    <div class="logo-mark">HM</div>
+                    <div class="logo-text">Heath<span>Media</span></div>
+                </div>
+                <div class="date-badge">Google Ads</div>
+            </div>
+            <div class="slide-number">03</div>
+            
+            <h2>Google Ads Performance</h2>
+            <p class="subtitle">Nov 16 - Dec 15, 2025 compared to Oct 17 - Nov 15, 2025</p>
+            
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Total Spend</div>
+                    <div class="metric-value">CHF 3,362</div>
+                    <span class="metric-change positive">+246%</span>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Total Clicks</div>
+                    <div class="metric-value">1,861</div>
+                    <span class="metric-change positive">+247%</span>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Impressions</div>
+                    <div class="metric-value">255.7K</div>
+                    <span class="metric-change positive">+230%</span>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Conversions</div>
+                    <div class="metric-value">0</div>
+                    <span class="metric-change neutral">Building Data</span>
+                </div>
+            </div>
+            
+            <h3>Campaign Breakdown</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Campaign</th>
+                        <th>Spend</th>
+                        <th>Clicks</th>
+                        <th>CPC</th>
+                        <th>Impr. Share</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="highlight-row">
+                        <td><strong>Shopping Best Sellers</strong></td>
+                        <td>CHF 1,128.20</td>
+                        <td>1,268</td>
+                        <td>CHF 0.89</td>
+                        <td>25.36%</td>
+                        <td><span class="status-badge warning">Limited Budget</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Commercial Intent | ENG</strong></td>
+                        <td>CHF 1,129.03</td>
+                        <td>309</td>
+                        <td>CHF 3.65</td>
+                        <td>48.14%</td>
+                        <td><span class="status-badge warning">Limited Budget</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Commercial Intent | DEU</strong></td>
+                        <td>CHF 1,102.55</td>
+                        <td>281</td>
+                        <td>CHF 3.92</td>
+                        <td>36.49%</td>
+                        <td><span class="status-badge warning">Limited Budget</span></td>
+                    </tr>
+                    <tr>
+                        <td>Display Remarketing</td>
+                        <td>CHF 0.64</td>
+                        <td>2</td>
+                        <td>CHF 0.32</td>
+                        <td>—</td>
+                        <td><span class="status-badge active">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td>Dynamic Display</td>
+                        <td>CHF 1.88</td>
+                        <td>1</td>
+                        <td>CHF 1.88</td>
+                        <td>—</td>
+                        <td><span class="status-badge active">Active</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="alert-box info">
+                <div class="alert-icon">💡</div>
+                <div class="alert-content">
+                    <h4>Shopping Campaign Opportunity</h4>
+                    <p>Shopping impression share grew from 10% to 25.36% (+153%) while maintaining exceptional CHF 0.89 CPC. This campaign type offers the best efficiency and should be prioritized for budget allocation.</p>
+                </div>
+            </div>
+            
+            <div class="slide-footer">
+                <span class="footer-note">Performance Max paused — previously CHF 690.72 spend with minimal contribution</span>
+                <div class="page-indicator">
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot active"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 4: Meta Ads Performance -->
+        <section class="slide">
+            <div class="header">
+                <div class="logo-section">
+                    <div class="logo-mark">HM</div>
+                    <div class="logo-text">Heath<span>Media</span></div>
+                </div>
+                <div class="date-badge">Meta Ads</div>
+            </div>
+            <div class="slide-number">04</div>
+            
+            <h2>Meta Ads Performance</h2>
+            <p class="subtitle">Oct 1 - Dec 16, 2025 campaign analysis with recent 14-day deep dive</p>
+            
+            <div class="metric-grid">
+                <div class="metric-card success">
+                    <div class="metric-label">Total Leads</div>
+                    <div class="metric-value">151</div>
+                    <span class="metric-change positive">Active Campaigns</span>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Avg. CPL</div>
+                    <div class="metric-value">CHF 7.59</div>
+                    <span class="metric-change positive">↓ to CHF 5.13 (Dec)</span>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Event RSVPs</div>
+                    <div class="metric-value">35</div>
+                    <span class="metric-change positive">CHF 1.36 CPR</span>
+                </div>
+                <div class="metric-card warning">
+                    <div class="metric-label">Inactive Campaigns</div>
+                    <div class="metric-value">4</div>
+                    <span class="metric-change neutral">Consolidation Needed</span>
+                </div>
+            </div>
+            
+            <div class="two-col">
+                <div>
+                    <h3>Active Campaign Performance</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Campaign</th>
+                                <th>Results</th>
+                                <th>Cost/Result</th>
+                                <th>Spend</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="highlight-row">
+                                <td><strong>Meta Leads | Diamond Pieces</strong></td>
+                                <td>116 leads</td>
+                                <td>CHF 7.59</td>
+                                <td>CHF 880.77</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Engagement Ring Guide</strong></td>
+                                <td>47 leads</td>
+                                <td>CHF 23.17</td>
+                                <td>CHF 1,089.02</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Showroom Events</strong></td>
+                                <td>35 RSVPs</td>
+                                <td>CHF 1.36</td>
+                                <td>CHF 47.49</td>
+                            </tr>
+                            <tr>
+                                <td>Christmas Ready to Ship</td>
+                                <td>0 leads</td>
+                                <td>—</td>
+                                <td>CHF 78.84</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h3>Recent Performance (Dec 2-15)</h3>
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <span style="font-size: 14px; color: var(--text-muted);">Cost Per Lead Trend</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>Diamond Pieces</span>
+                                <span style="color: var(--success);">CHF 5.13</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill success" style="width: 25%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>Maison Gassmann Video</span>
+                                <span style="color: var(--success);">CHF 5.86</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill success" style="width: 29%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>Oct 15 Reel (Static)</span>
+                                <span style="color: var(--accent-gold);">CHF 7.05</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill gold" style="width: 35%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>Engagement Ring (Paused)</span>
+                                <span style="color: var(--danger);">CHF 23.17</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill orange" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                        <p style="font-size: 13px; margin-top: 20px;">Video creative driving 76% better CPL than static imagery</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide-footer">
+                <span class="footer-note">December 21 Event Campaign ends after showroom date</span>
+                <div class="page-indicator">
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot active"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 5: Device & Demographics -->
+        <section class="slide">
+            <div class="header">
+                <div class="logo-section">
+                    <div class="logo-mark">HM</div>
+                    <div class="logo-text">Heath<span>Media</span></div>
+                </div>
+                <div class="date-badge">Audience Insights</div>
+            </div>
+            <div class="slide-number">05</div>
+            
+            <h2>Device & Demographic Analysis</h2>
+            <p class="subtitle">Understanding your audience to optimize targeting and creative strategy</p>
+            
+            <div class="two-col">
+                <div>
+                    <h3>Device Performance (Google Ads)</h3>
+                    <div class="chart-container">
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>📱 Mobile</span>
+                                <span>84% of spend | CHF 2,839</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill orange" style="width: 84%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>💻 Desktop</span>
+                                <span>14% of spend | CHF 485</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill gold" style="width: 14%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>📲 Tablet</span>
+                                <span>1% of spend | CHF 38</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill success" style="width: 2%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="alert-box warning" style="margin-top: 25px;">
+                            <div class="alert-icon">⚠️</div>
+                            <div class="alert-content">
+                                <h4>Mobile Dominance</h4>
+                                <p>Mobile drives 84% of traffic but recorded 0 conversions this period (vs 1 prior). Landing page mobile experience critical.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Top Demographics (Google Ads)</h3>
+                    <div class="chart-container">
+                        <table class="data-table" style="margin: 0;">
+                            <thead>
+                                <tr>
+                                    <th>Segment</th>
+                                    <th>Impressions</th>
+                                    <th>% of Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="highlight-row">
+                                    <td>👩 Female 25-34</td>
+                                    <td>1,745</td>
+                                    <td><strong>18.47%</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>👩 Female 65+</td>
+                                    <td>1,652</td>
+                                    <td>17.49%</td>
+                                </tr>
+                                <tr>
+                                    <td>👩 Female 35-44</td>
+                                    <td>1,161</td>
+                                    <td>12.29%</td>
+                                </tr>
+                                <tr>
+                                    <td>👨 Male 45-54</td>
+                                    <td>922</td>
+                                    <td>9.76%</td>
+                                </tr>
+                                <tr>
+                                    <td>👩 Female 45-54</td>
+                                    <td>888</td>
+                                    <td>9.40%</td>
+                                </tr>
+                                <tr>
+                                    <td>👨 Male 55-64</td>
+                                    <td>679</td>
+                                    <td>7.19%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="alert-box success" style="margin-top: 30px;">
+                <div class="alert-icon">🎯</div>
+                <div class="alert-content">
+                    <h4>Targeting Alignment</h4>
+                    <p>Female 25-34 segment showing highest engagement (18.47%), aligning with self-purchase persona. Consider increasing bid adjustments for this demographic while testing creative variations for the 65+ segment showing strong interest.</p>
+                </div>
+            </div>
+            
+            <div class="slide-footer">
+                <span class="footer-note">Demographics based on known users only — some traffic unidentified</span>
+                <div class="page-indicator">
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot active"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 6: December 21 Event Update -->
+        <section class="slide">
+            <div class="header">
+                <div class="logo-section">
+                    <div class="logo-mark">HM</div>
+                    <div class="logo-text">Heath<span>Media</span></div>
+                </div>
+                <div class="date-badge">Event Campaign</div>
+            </div>
+            <div class="slide-number">06</div>
+            
+            <h2>December 21st Showroom Event</h2>
+            <p class="subtitle">Maison Gassmann, Zurich — Personal consultation with Milena</p>
+            
+            <div class="metric-grid">
+                <div class="metric-card success">
+                    <div class="metric-label">Total RSVPs</div>
+                    <div class="metric-value">35</div>
+                    <span class="metric-change positive">Event Awareness</span>
+                </div>
+                <div class="metric-card success">
+                    <div class="metric-label">Cost Per RSVP</div>
+                    <div class="metric-value">CHF 1.36</div>
+                    <span class="metric-change positive">Excellent Efficiency</span>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Total Spend</div>
+                    <div class="metric-value">CHF 47.49</div>
+                    <span class="metric-change neutral">Budget Efficient</span>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Reach</div>
+                    <div class="metric-value">2,842</div>
+                    <span class="metric-change positive">Zurich Local</span>
+                </div>
+            </div>
+            
+            <div class="two-col">
+                <div>
+                    <h3>Campaign Performance by Ad Set</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Ad Set</th>
+                                <th>Spend</th>
+                                <th>RSVPs</th>
+                                <th>CPR</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="highlight-row">
+                                <td><strong>Zurich Local | Dec 21 | EN</strong></td>
+                                <td>CHF 30.05</td>
+                                <td>21</td>
+                                <td>CHF 1.43</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Zurich Local | Dec 21 | DE</strong></td>
+                                <td>CHF 13.36</td>
+                                <td>12</td>
+                                <td>CHF 1.11</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="alert-box info" style="margin-top: 25px;">
+                        <div class="alert-icon">📍</div>
+                        <div class="alert-content">
+                            <h4>German Ad Efficiency</h4>
+                            <p>German-language creative achieving lower CPR (CHF 1.11 vs CHF 1.43), suggesting local Swiss-German audience responds better to native language messaging.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Event Response Status</h3>
+                    <div class="chart-container">
+                        <div style="text-align: center; padding: 30px 0;">
+                            <div style="font-size: 80px; margin-bottom: 20px;">🎉</div>
+                            <div class="metric-value" style="font-size: 56px;">35</div>
+                            <p style="font-size: 18px; color: var(--text-muted); margin-top: 10px;">Total People Interested</p>
+                        </div>
+                        
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>Interested</span>
+                                <span>28 people</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill gold" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>Confirmed Going</span>
+                                <span>3 people</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill success" style="width: 9%;"></div>
+                            </div>
+                        </div>
+                        
+                        <p style="font-size: 13px; margin-top: 20px; color: var(--text-muted);">Campaign ends December 21, 2025</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide-footer">
+                <span class="footer-note">Consider follow-up event campaigns for January/February based on this success</span>
+                <div class="page-indicator">
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot active"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 7: Campaign Consolidation -->
+        <section class="slide">
+            <div class="header">
+                <div class="logo-section">
+                    <div class="logo-mark">HM</div>
+                    <div class="logo-text">Heath<span>Media</span></div>
+                </div>
+                <div class="date-badge">Optimization</div>
+            </div>
+            <div class="slide-number">07</div>
+            
+            <h2>Campaign Consolidation Strategy</h2>
+            <p class="subtitle">Streamlining for efficiency and reduced oversight needs</p>
+            
+            <div class="two-col">
+                <div>
+                    <h3>Current State: Too Many Campaigns</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Platform</th>
+                                <th>Active</th>
+                                <th>Inactive/Paused</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Google Ads</strong></td>
+                                <td>5</td>
+                                <td>1 (PMax)</td>
+                                <td>Consolidate to 3</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Meta Ads</strong></td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>Consolidate to 2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="alert-box warning" style="margin-top: 25px;">
+                        <div class="alert-icon">💡</div>
+                        <div class="alert-content">
+                            <h4>Why Consolidate?</h4>
+                            <p>Fewer campaigns = faster learning, easier management, and better budget efficiency. Critical for reduced oversight post-April.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Recommended Structure</h3>
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h4 style="color: var(--success);">Google Ads (3 Campaigns)</h4>
+                        <ul class="action-list">
+                            <li style="padding: 12px 15px;">
+                                <span class="action-priority low"></span>
+                                <strong>Shopping Best Sellers</strong> — CHF 50/day
+                            </li>
+                            <li style="padding: 12px 15px;">
+                                <span class="action-priority low"></span>
+                                <strong>Commercial Intent (Combined)</strong> — CHF 30/day
+                            </li>
+                            <li style="padding: 12px 15px;">
+                                <span class="action-priority low"></span>
+                                <strong>Remarketing</strong> — CHF 10/day
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4 style="color: var(--success);">Meta Ads (2 Campaigns)</h4>
+                        <ul class="action-list">
+                            <li style="padding: 12px 15px;">
+                                <span class="action-priority low"></span>
+                                <strong>Lead Gen | Diamond Pieces</strong> — CHF 25/day
+                            </li>
+                            <li style="padding: 12px 15px;">
+                                <span class="action-priority low"></span>
+                                <strong>Event/Seasonal</strong> — CHF 10/day (as needed)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 40px;">Campaigns to Sunset</h3>
+            <div class="three-col">
+                <div class="card" style="border-top: 4px solid var(--danger);">
+                    <h4 style="color: var(--danger);">Remove</h4>
+                    <ul class="action-list">
+                        <li style="padding: 12px 15px;">
+                            Meta: Engagement Ring Guide<br>
+                            <span style="color: var(--text-muted); font-size: 13px;">CHF 23.17 CPL — 3x higher than Diamond Pieces</span>
+                        </li>
+                        <li style="padding: 12px 15px;">
+                            Meta: BOF Website Leads<br>
+                            <span style="color: var(--text-muted); font-size: 13px;">0 leads this period — not delivering</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card" style="border-top: 4px solid var(--warning);">
+                    <h4 style="color: var(--warning);">Review</h4>
+                    <ul class="action-list">
+                        <li style="padding: 12px 15px;">
+                            Meta: Christmas Ready to Ship<br>
+                            <span style="color: var(--text-muted); font-size: 13px;">0 leads despite +470% spend — evaluate creative</span>
+                        </li>
+                        <li style="padding: 12px 15px;">
+                            Google: Dynamic Display<br>
+                            <span style="color: var(--text-muted); font-size: 13px;">Minimal activity — merge with remarketing</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card" style="border-top: 4px solid var(--success);">
+                    <h4 style="color: var(--success);">Keep & Scale</h4>
+                    <ul class="action-list">
+                        <li style="padding: 12px 15px;">
+                            Google: Shopping Best Sellers<br>
+                            <span style="color: var(--text-muted); font-size: 13px;">CHF 0.89 CPC — highest efficiency</span>
+                        </li>
+                        <li style="padding: 12px 15px;">
+                            Meta: Diamond Pieces Lead Gen<br>
+                            <span style="color: var(--text-muted); font-size: 13px;">CHF 5.13 CPL (Dec) — consistent performer</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="slide-footer">
+                <span class="footer-note">Target: 5 total campaigns across platforms by end of January</span>
+                <div class="page-indicator">
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot active"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 8: Q1 2026 Roadmap -->
+        <section class="slide">
+            <div class="header">
+                <div class="logo-section">
+                    <div class="logo-mark">HM</div>
+                    <div class="logo-text">Heath<span>Media</span></div>
+                </div>
+                <div class="date-badge">Strategic Roadmap</div>
+            </div>
+            <div class="slide-number">08</div>
+            
+            <h2>Q1 2026 Execution Plan</h2>
+            <p class="subtitle">Month-by-month priorities optimized for April baby arrival timeline</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">JANUARY 2026</div>
+                    <h4>Foundation & Optimization Phase</h4>
+                    <div class="two-col" style="margin: 15px 0; gap: 30px;">
+                        <div>
+                            <p style="font-size: 15px;"><strong style="color: var(--accent-orange);">Google Ads:</strong> Evaluate Search campaign performance by mid-January. Scale Shopping budget as top performer. Implement negative keyword cleanup from agency.</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 15px;"><strong style="color: var(--accent-orange);">Meta:</strong> Consolidate to Diamond Pieces lead gen (top performer). Test 2-3 new video creatives. Phase out underperforming Engagement Ring campaign.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">FEBRUARY 2026</div>
+                    <h4>Valentine's Day Push & Scaling Winners</h4>
+                    <div class="two-col" style="margin: 15px 0; gap: 30px;">
+                        <div>
+                            <p style="font-size: 15px;"><strong style="color: var(--accent-orange);">Google Ads:</strong> Valentine's Day Shopping focus (Feb 1-14). Scale budget temporarily for gifting season. Implement negative keyword cleanup.</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 15px;"><strong style="color: var(--accent-orange);">Meta:</strong> Valentine's creative refresh. Target male gift-givers 35-65+ with video content. Ready to Ship collection promotion.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">MARCH 2026</div>
+                    <h4>Automation & Reduced Oversight Setup</h4>
+                    <div class="two-col" style="margin: 15px 0; gap: 30px;">
+                        <div>
+                            <p style="font-size: 15px;"><strong style="color: var(--accent-orange);">Google Ads:</strong> Simplify to 2-3 core campaigns. Set up automated rules for budget pacing. Document campaign structure for DIY management.</p>
+                        </div>
+                        <div>
+                            <p style="font-size: 15px;"><strong style="color: var(--accent-orange);">Meta:</strong> Establish evergreen lead gen funnel. Create content calendar through Q2. Train on Klaviyo automation for lead nurturing.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">APRIL 2026 →</div>
+                    <h4>Maintenance Mode</h4>
+                    <p style="font-size: 15px;">Simplified campaign structure running with minimal oversight. Weekly 30-min check-ins. Automated reporting. Focus on lead nurturing via email.</p>
+                </div>
+            </div>
+            
+            <div class="slide-footer">
+                <span class="footer-note">Timeline designed for reduced management needs post-April</span>
+                <div class="page-indicator">
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot active"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 9: Budget Recommendations -->
+        <section class="slide">
+            <div class="header">
+                <div class="logo-section">
+                    <div class="logo-mark">HM</div>
+                    <div class="logo-text">Heath<span>Media</span></div>
+                </div>
+                <div class="date-badge">Budget Strategy</div>
+            </div>
+            <div class="slide-number">09</div>
+            
+            <h2>Budget Optimization Strategy</h2>
+            <p class="subtitle">Maximizing efficiency with current CHF 100/day allocation</p>
+            
+            <div class="two-col">
+                <div>
+                    <h3>Current Allocation</h3>
+                    <div class="chart-container">
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>Google Ads</span>
+                                <span>~CHF 112/day</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill orange" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>Meta Ads</span>
+                                <span>~CHF 40/day</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill gold" style="width: 40%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 30px; padding: 20px; background: var(--card-bg); border-radius: 12px;">
+                            <p style="font-size: 14px; margin-bottom: 15px;"><strong>Monthly Total:</strong> ~CHF 3,800</p>
+                            <p style="font-size: 14px; margin-bottom: 0;"><strong>Key Issue:</strong> All Google Search campaigns showing "Limited by Budget" status</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Recommended Reallocation</h3>
+                    <div class="chart-container">
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>Google Shopping</span>
+                                <span>CHF 50/day</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill success" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>Meta Lead Gen</span>
+                                <span>CHF 30/day</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill success" style="width: 30%;"></div>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>Google Search (Top)</span>
+                                <span>CHF 20/day</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill gold" style="width: 20%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 30px; padding: 20px; background: rgba(46, 204, 113, 0.1); border-radius: 12px; border: 1px solid rgba(46, 204, 113, 0.3);">
+                            <p style="font-size: 14px; margin-bottom: 0; color: var(--success);"><strong>Benefit:</strong> Focus on proven performers, eliminate waste on underperforming campaigns</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 40px;">DIY vs. Agency Support Decision</h3>
+            <div class="two-col">
+                <div class="card">
+                    <h4 style="color: var(--success);">Can Manage Independently</h4>
+                    <ul class="action-list">
+                        <li style="padding: 12px 15px;">
+                            <span class="action-priority low"></span>
+                            Meta lead gen campaigns (established, stable CPL)
+                        </li>
+                        <li style="padding: 12px 15px;">
+                            <span class="action-priority low"></span>
+                            Google Shopping (automated bidding, minimal optimization)
+                        </li>
+                        <li style="padding: 12px 15px;">
+                            <span class="action-priority low"></span>
+                            Weekly performance monitoring (30 min/week)
+                        </li>
+                        <li style="padding: 12px 15px;">
+                            <span class="action-priority low"></span>
+                            Klaviyo email nurturing for captured leads
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4 style="color: var(--warning);">Benefits from Expert Support</h4>
+                    <ul class="action-list">
+                        <li style="padding: 12px 15px;">
+                            <span class="action-priority medium"></span>
+                            New campaign launches (Valentine's, events)
+                        </li>
+                        <li style="padding: 12px 15px;">
+                            <span class="action-priority medium"></span>
+                            Google Search campaign optimization
+                        </li>
+                        <li style="padding: 12px 15px;">
+                            <span class="action-priority medium"></span>
+                            Creative strategy & video production guidance
+                        </li>
+                        <li style="padding: 12px 15px;">
+                            <span class="action-priority medium"></span>
+                            Negative keyword management & search term cleanup
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="slide-footer">
+                <span class="footer-note">Agency renewal decision by December 28 — consider Q1 reduced-scope proposal</span>
+                <div class="page-indicator">
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot active"></div>
+                    <div class="page-dot"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 10: Next Steps -->
+        <section class="slide">
+            <div class="header">
+                <div class="logo-section">
+                    <div class="logo-mark">HM</div>
+                    <div class="logo-text">Heath<span>Media</span></div>
+                </div>
+                <div class="date-badge">Action Plan</div>
+            </div>
+            <div class="slide-number">10</div>
+            
+            <h2>Immediate Next Steps</h2>
+            <p class="subtitle">Priority actions for the next 14 days</p>
+            
+            <div class="three-col">
+                <div class="card" style="border-top: 4px solid var(--danger);">
+                    <h4 style="color: var(--danger);">🚨 URGENT (This Week)</h4>
+                    <ul class="action-list">
+                        <li style="padding: 15px;">
+                            <div>
+                                <strong>December 21 event follow-up plan</strong><br>
+                                <span style="color: var(--text-muted); font-size: 13px;">Prepare for in-person consultations at Maison Gassmann</span>
+                            </div>
+                        </li>
+                        <li style="padding: 15px;">
+                            <div>
+                                <strong>Review Christmas campaign</strong><br>
+                                <span style="color: var(--text-muted); font-size: 13px;">Pause or pivot Ready to Ship if no improvement</span>
+                            </div>
+                        </li>
+                        <li style="padding: 15px;">
+                            <div>
+                                <strong>Pause Engagement Ring campaign</strong><br>
+                                <span style="color: var(--text-muted); font-size: 13px;">Reallocate CHF 23+ CPL budget to Diamond Pieces</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card" style="border-top: 4px solid var(--warning);">
+                    <h4 style="color: var(--warning);">⚡ HIGH (By Dec 28)</h4>
+                    <ul class="action-list">
+                        <li style="padding: 15px;">
+                            <div>
+                                <strong>Agency renewal decision</strong><br>
+                                <span style="color: var(--text-muted); font-size: 13px;">Request Q1 reduced-scope proposal</span>
+                            </div>
+                        </li>
+                        <li style="padding: 15px;">
+                            <div>
+                                <strong>Consolidate Meta campaigns</strong><br>
+                                <span style="color: var(--text-muted); font-size: 13px;">Focus budget on Diamond Pieces lead gen</span>
+                            </div>
+                        </li>
+                        <li style="padding: 15px;">
+                            <div>
+                                <strong>Q1 content calendar draft</strong><br>
+                                <span style="color: var(--text-muted); font-size: 13px;">Plan creative needs through Valentine's</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card" style="border-top: 4px solid var(--success);">
+                    <h4 style="color: var(--success);">📋 STANDARD (January)</h4>
+                    <ul class="action-list">
+                        <li style="padding: 15px;">
+                            <div>
+                                <strong>Implement budget reallocation</strong><br>
+                                <span style="color: var(--text-muted); font-size: 13px;">Shift to recommended structure</span>
+                            </div>
+                        </li>
+                        <li style="padding: 15px;">
+                            <div>
+                                <strong>New video creative production</strong><br>
+                                <span style="color: var(--text-muted); font-size: 13px;">2-3 videos for Meta testing</span>
+                            </div>
+                        </li>
+                        <li style="padding: 15px;">
+                            <div>
+                                <strong>Klaviyo automation setup</strong><br>
+                                <span style="color: var(--text-muted); font-size: 13px;">Lead nurturing sequences</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="alert-box success" style="margin-top: 40px;">
+                <div class="alert-icon">💎</div>
+                <div class="alert-content">
+                    <h4>Key Success Metrics for Q1 2026</h4>
+                    <p>Target CPL under CHF 8 on Meta • Google Shopping CPC under CHF 1.00 • 150+ qualified leads per month • Simplified campaign structure ready for reduced oversight by April</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <p style="font-size: 24px; font-family: 'Playfair Display', serif; color: var(--text-light);">Questions? Let's discuss strategy.</p>
+                <p style="color: var(--text-muted); margin-top: 10px;">Next review: Friday 3pm Swiss Time</p>
+            </div>
+            
+            <div class="slide-footer">
+                <span class="footer-note">Heath Media | Strategic Performance Marketing</span>
+                <div class="page-indicator">
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot"></div>
+                    <div class="page-dot active"></div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
